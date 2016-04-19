@@ -15,6 +15,7 @@ namespace RVRMeander.Model.Mc
 {
   [Export(typeof(IToolbarItem))]
   [Export(typeof(IInteractiveWindow))]
+  [Export(typeof(ChannelProperties))]
   public partial class ChannelProperties : DockableWindow, IToolbarItem, IInteractiveWindow, Core.Events.IListener<Core.Project.Events.PackageOpened>
   {
     private const string File_Section = "MC";
@@ -24,6 +25,8 @@ namespace RVRMeander.Model.Mc
     private const string File_ValleySlope = "ValleySlope";
     private const string File_ManningsN = "ManningsN";
     private const string File_UpstreamBedElev = "UpstreamBedElev";
+    private const string File_Duration = "Duration";
+    private const string File_NumIterations = "NumIterations";
 
     [Import]
     IProjectManager projectMgr;
@@ -99,6 +102,16 @@ namespace RVRMeander.Model.Mc
 
     #endregion
 
+    
+    internal string PropWidth { get { return this.txtWidth.Text; } }
+    internal string PropFlow { get { return this.txtFlow.Text; } }
+    internal string PropSedimentSize { get { return this.txtSedimentSize.Text; } }
+    internal string PropValleySlope { get { return this.txtValleySlope.Text; } }
+    internal string PropManningsN { get { return this.txtManningsN.Text; } }
+    internal string PropUpstreamBedElev { get { return this.txtUSBedElevation.Text; } }
+    internal string PropNumIterations { get { return this.txtNumIterations.Text; } }
+    internal string PropDuration { get { return this.txtDuration.Text; } }
+
     private void btnSave_Click(object sender, EventArgs e)
     {
       this.projectMgr.SetProperty(File_Section, File_Width, this.txtWidth.Text);
@@ -107,6 +120,8 @@ namespace RVRMeander.Model.Mc
       this.projectMgr.SetProperty(File_Section, File_ValleySlope, this.txtValleySlope.Text);
       this.projectMgr.SetProperty(File_Section, File_ManningsN, this.txtManningsN.Text);
       this.projectMgr.SetProperty(File_Section, File_UpstreamBedElev, this.txtUSBedElevation.Text);
+      this.projectMgr.SetProperty(File_Section, File_NumIterations, this.txtNumIterations.Text);
+      this.projectMgr.SetProperty(File_Section, File_Duration, this.txtDuration.Text);
       Hide();
     }
 
@@ -118,6 +133,8 @@ namespace RVRMeander.Model.Mc
       this.txtValleySlope.Text = this.projectMgr.GetProperty(File_Section, File_ValleySlope);
       this.txtManningsN.Text = this.projectMgr.GetProperty(File_Section, File_ManningsN);
       this.txtUSBedElevation.Text = this.projectMgr.GetProperty(File_Section, File_UpstreamBedElev);
+      this.txtNumIterations.Text = this.projectMgr.GetProperty(File_Section, File_NumIterations);
+      this.txtDuration.Text = this.projectMgr.GetProperty(File_Section, File_Duration);
     }
   }
 }

@@ -139,6 +139,27 @@ namespace RVRMeander.Gui.Project
       }
     }
 
+    /// <summary>
+    /// Creates a unique directory within the project that starts with the given prefix
+    /// and returns the path to it.
+    /// </summary>
+    /// <param name="dirNamePrefix"></param>
+    /// <returns></returns>
+    public string CreateDirectory(string dirNamePrefix)
+    {
+      string dirPath = Path.Combine(this.curProjectPath, dirNamePrefix + ".0");
+      int inc = 1;
+      while (Directory.Exists(dirPath))
+      {
+        dirPath = Path.Combine(this.curProjectPath, dirNamePrefix + "." + inc.ToString());
+        inc++;
+      }
+
+      Directory.CreateDirectory(dirPath);
+
+      return dirPath;
+    }
+
     public void MessageReceived(Core.Project.Events.PackageOpened theEvent)
     {
       this.curProjectPath = theEvent.PackagePath;

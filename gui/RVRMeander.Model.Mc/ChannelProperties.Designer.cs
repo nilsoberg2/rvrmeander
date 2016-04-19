@@ -42,6 +42,10 @@
       this.txtUSBedElevation = new System.Windows.Forms.TextBox();
       this.lblChannelProperties = new System.Windows.Forms.Label();
       this.btnSave = new System.Windows.Forms.Button();
+      this.label1 = new System.Windows.Forms.Label();
+      this.txtNumIterations = new System.Windows.Forms.TextBox();
+      this.label2 = new System.Windows.Forms.Label();
+      this.txtDuration = new System.Windows.Forms.TextBox();
       this.SuspendLayout();
       // 
       // txtFlow
@@ -164,7 +168,7 @@
       // btnSave
       // 
       this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnSave.Location = new System.Drawing.Point(179, 203);
+      this.btnSave.Location = new System.Drawing.Point(179, 271);
       this.btnSave.Name = "btnSave";
       this.btnSave.Size = new System.Drawing.Size(75, 23);
       this.btnSave.TabIndex = 6;
@@ -172,11 +176,51 @@
       this.btnSave.UseVisualStyleBackColor = true;
       this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
       // 
+      // label1
+      // 
+      this.label1.AutoSize = true;
+      this.label1.Location = new System.Drawing.Point(12, 206);
+      this.label1.Name = "label1";
+      this.label1.Size = new System.Drawing.Size(101, 13);
+      this.label1.TabIndex = 15;
+      this.label1.Text = "Number of iterations";
+      // 
+      // txtNumIterations
+      // 
+      this.txtNumIterations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.txtNumIterations.Location = new System.Drawing.Point(156, 203);
+      this.txtNumIterations.Name = "txtNumIterations";
+      this.txtNumIterations.Size = new System.Drawing.Size(97, 20);
+      this.txtNumIterations.TabIndex = 14;
+      // 
+      // label2
+      // 
+      this.label2.AutoSize = true;
+      this.label2.Location = new System.Drawing.Point(12, 232);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(81, 13);
+      this.label2.TabIndex = 17;
+      this.label2.Text = "Duration [years]";
+      // 
+      // txtDuration
+      // 
+      this.txtDuration.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.txtDuration.Location = new System.Drawing.Point(156, 229);
+      this.txtDuration.Name = "txtDuration";
+      this.txtDuration.Size = new System.Drawing.Size(97, 20);
+      this.txtDuration.TabIndex = 16;
+      // 
       // ChannelProperties
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(266, 262);
+      this.ClientSize = new System.Drawing.Size(266, 351);
+      this.Controls.Add(this.label2);
+      this.Controls.Add(this.txtDuration);
+      this.Controls.Add(this.label1);
+      this.Controls.Add(this.txtNumIterations);
       this.Controls.Add(this.btnSave);
       this.Controls.Add(this.lblChannelProperties);
       this.Controls.Add(this.lblUSBedElevation);
@@ -216,5 +260,9 @@
         private System.Windows.Forms.TextBox txtUSBedElevation;
         private System.Windows.Forms.Label lblChannelProperties;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNumIterations;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDuration;
     }
 }

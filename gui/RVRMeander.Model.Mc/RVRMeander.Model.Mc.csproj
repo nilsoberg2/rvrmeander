@@ -52,8 +52,11 @@
       <DependentUpon>ChannelProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="Const.cs" />
+    <Compile Include="DllAccess.cs" />
+    <Compile Include="PInvoke.cs" />
     <Compile Include="RunModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RvrDotNetAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ChannelProperties.resx">
@@ -77,6 +80,89 @@
       <Project>{cb776668-70eb-4401-9abc-8418b0cc538b}</Project>
       <Name>RVRMeander.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\inih.dll">
+      <Link>x86\inih.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\libconfig++.dll">
+      <Link>x86\libconfig++.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\librmbankerosion.dll">
+      <Link>x86\librmbankerosion.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\librmfilter.dll">
+      <Link>x86\librmfilter.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\librmhydrodynamics.dll">
+      <Link>x86\librmhydrodynamics.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\librmio.dll">
+      <Link>x86\librmio.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\librmmigration.dll">
+      <Link>x86\librmmigration.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\librmplotting.dll">
+      <Link>x86\librmplotting.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\librmprep.dll">
+      <Link>x86\librmprep.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\Win32\Release\RVRMeander.dll">
+      <Link>x86\RVRMeander.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\inih.dll">
+      <Link>x64\inih.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\libconfig++.dll">
+      <Link>x64\libconfig++.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\librmbankerosion.dll">
+      <Link>x64\librmbankerosion.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\librmfilter.dll">
+      <Link>x64\librmfilter.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\librmhydrodynamics.dll">
+      <Link>x64\librmhydrodynamics.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\librmio.dll">
+      <Link>x64\librmio.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\librmmigration.dll">
+      <Link>x64\librmmigration.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\librmplotting.dll">
+      <Link>x64\librmplotting.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\librmprep.dll">
+      <Link>x64\librmprep.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\engine\apps\BUILD\x64\Release\RVRMeander.dll">
+      <Link>x64\RVRMeander.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

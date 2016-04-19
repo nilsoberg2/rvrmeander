@@ -4,6 +4,7 @@
 #include "rmhydrodynamics_ikeda1981.h"
 #include "../rmmigration/rmmigrationdata.h"
 #include "../rmdebug/debug_printing.h"
+#define TTMATH_NOASM 1 // http://www.ttmath.org/forum/how_to_compile_with_visual_studio_2010_64-bit
 #include "ttmath/ttmath.h" //MMMMTEMP Secondary flow correction
 
 

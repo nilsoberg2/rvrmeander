@@ -28,6 +28,8 @@ namespace RVRMeander.Gui.Gis
   public partial class MapWindow : DockableWindow, IMapWindow, Core.Window.IToolbarItem, Core.Window.IToolbarItemArray, WebMap.IBasemapWindow,
     Core.Events.IListener<Core.Project.Events.PackageOpened>
   {
+    private const string Section_Layers = "LAYERS";
+
     private List<IToolbarItem> toolItems;
     private MapTool selectMapTool;
 
@@ -76,6 +78,50 @@ namespace RVRMeander.Gui.Gis
       {
         this.map.Layers.Add(g.MapGroup);
       }
+    }
+
+    public double[,] GetLayerPoints(string layerName)
+    {
+      IMapFeatureLayer layer;
+      if (!TryGetMapLayer(layerName, out layer) || layer.DataSet.Features.Count == 0)
+      {
+        return new double[0, 0];
+      }
+
+      // Right now we only handle the first feature
+
+      var feature = layer.DataSet.Features[0];
+
+      var data = new double[feature.Coordinates.Count, 2];
+      
+      for (int i = 0; i < feature.Coordinates.Count; i++)
+      {
+        var point = feature.Coordinates[i];
+        data[i, 0] = point.X;
+        data[i, 1] = point.Y;
+      }
+
+      return data;
+    }
+
+    private bool TryGetMapLayer(string layerName, out IMapFeatureLayer mapFeatureLayer)
+    {
+      mapFeatureLayer = null;
+
+      foreach (var layer in this.map.Layers)
+      {
+        if (layer.LegendText.ToLower() == layerName.ToLower())
+        {
+          IMapFeatureLayer temp = layer as IMapFeatureLayer;
+          if (temp != null)
+          {
+            mapFeatureLayer = temp;
+            return true;
+          }
+        }
+      }
+
+      return false;
     }
     
     #region IToolbarItem Members
@@ -368,7 +414,7 @@ namespace RVRMeander.Gui.Gis
 
       if (!addedFromProject)
       {
-        this.projectMgr.SetProperty("LAYERS", mapLayer.LegendText, filePath);
+        this.projectMgr.SetProperty(Section_Layers, mapLayer.LegendText, filePath);
       }
 
       return true;
@@ -454,6 +500,11 @@ namespace RVRMeander.Gui.Gis
       return layer;
     }
 
+    public string GetLayerPath(string layerName)
+    {
+      return this.projectMgr.GetProperty(Section_Layers, layerName);
+    }
+
     public void MessageReceived(Core.Project.Events.PackageOpened theEvent)
     {
       this.map.Layers.Clear();
@@ -464,10 +515,10 @@ namespace RVRMeander.Gui.Gis
 
       if (isEnabled)
       {
-        string[] layerNames = this.projectMgr.GetProperties("LAYERS");
+        string[] layerNames = this.projectMgr.GetProperties(Section_Layers);
         foreach (var layerName in layerNames)
         {
-          string path = this.projectMgr.GetProperty("LAYERS", layerName);
+          string path = this.projectMgr.GetProperty(Section_Layers, layerName);
           if (File.Exists(path))
           {
             ImportShapefile(path, layerName, "", true);

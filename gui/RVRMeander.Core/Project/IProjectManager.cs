@@ -21,7 +21,13 @@ namespace RVRMeander.Core.Project
     string[] GetProperties(string groupName);
 
     bool CreatePackage(string pathToPackageDir);
-
-
+    
+    /// <summary>
+    /// Creates a unique directory within the project that starts with the given prefix
+    /// and returns the path to it.
+    /// </summary>
+    /// <param name="dirNamePrefix"></param>
+    /// <returns></returns>
+    string CreateDirectory(string dirNamePrefix);
   }
 }
