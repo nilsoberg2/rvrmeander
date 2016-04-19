@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF3072FB-7543-4BD8-BF41-EF26E7D962BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RVRMeander.Gui</RootNamespace>
+    <AssemblyName>RVRMeander.Gui</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://hydrolab.illinois.edu/rvrmeander-2/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://hydrolab.illinois.edu/software/rvrmeander-2/</InstallUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>RVRMeander 2</ProductName>
+    <PublisherName>Ven Te Chow Hydrosystems Lab</PublisherName>
+    <SuiteName>RVRMeander</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>827398D9E9EFE260AA8FEB70DB92C9E506980EFA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BruTile">
+      <HintPath>Gis\WebMap\Lib\BruTile.dll</HintPath>
+    </Reference>
+    <Reference Include="BruTile.Desktop">
+      <HintPath>Gis\WebMap\Lib\BruTile.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Controls, Version=1.7.0.0, Culture=neutral, PublicKeyToken=4d9e49339a7d240c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Data, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c29dbf30e059ca9d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Data.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=53ab5a198378d4c1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Data.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Plugins.ShapeEditor">
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\Plugins\DotSpatial.Plugins.ShapeEditor\DotSpatial.Plugins.ShapeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Projections, Version=1.7.0.0, Culture=neutral, PublicKeyToken=272632bddd08a38b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Projections.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Symbology, Version=1.7.0.0, Culture=neutral, PublicKeyToken=6178c08da7998387, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Symbology.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Topology, Version=1.8.0.0, Culture=neutral, PublicKeyToken=a66b5e9434ca3671, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Topology.dll</HintPath>
+    </Reference>
+    <Reference Include="MRG.Controls.UI">
+      <HintPath>..\..\contrib\LoadingCircle\MRG.Controls.UI\bin\Release\MRG.Controls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>..\..\contrib\Ribbon\System.Windows.Forms.Ribbon\bin\Release\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\..\contrib\DockPanelSuite\master\bin\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventManager.cs" />
+    <Compile Include="Gis\AddDataset.cs" />
+    <Compile Include="Gis\BasemapLayers.cs" />
+    <Compile Include="Gis\Const.cs" />
+    <Compile Include="Gis\DotSpatialMapGroup.cs" />
+    <Compile Include="Gis\Icons.Designer.cs">
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Gis\IMapComboToolbarItem.cs" />
+    <Compile Include="Gis\WebMap\BrutileServiceProvider.cs" />
+    <Compile Include="Gis\WebMap\Configuration\ServiceProviderElement.cs" />
+    <Compile Include="Gis\WebMap\Configuration\ServiceProviderElementCollection.cs" />
+    <Compile Include="Gis\WebMap\Configuration\WebMapConfigurationSection.cs" />
+    <Compile Include="Gis\WebMap\IBasemapWindow.cs" />
+    <Compile Include="Gis\WebMap\OtherServiceProvider.cs" />
+    <Compile Include="Gis\WebMap\Resources\Resources.Designer.cs" />
+    <Compile Include="Gis\WebMap\ServiceProvider.cs" />
+    <Compile Include="Gis\WebMap\ServiceProviderFactory.cs" />
+    <Compile Include="Gis\WebMap\Tiling\TileCalculator.cs" />
+    <Compile Include="Gis\WebMap\Tiling\TileManager.cs" />
+    <Compile Include="Gis\WebMap\Tiling\Tiles.cs" />
+    <Compile Include="Gis\WebMap\Util.cs" />
+    <Compile Include="Gis\WebMap\WMS\WmsInfo.cs" />
+    <Compile Include="Gis\WebMap\WMS\WmsRequest.cs" />
+    <Compile Include="Gis\WebMap\WMS\WMSServerParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gis\WebMap\WMS\WMSServerParameters.Designer.cs" />
+    <Compile Include="Gis\WebMap\WMS\WmsServiceProvider.cs" />
+    <Compile Include="Gis\WebMap\WMS\WmsTileSource.cs" />
+    <Compile Include="Layers\ImportLayer.cs" />
+    <Compile Include="Layers\ISnapSettings.cs" />
+    <Compile Include="Layers\LayerDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layers\LayerDefinition.Designer.cs">
+      <DependentUpon>LayerDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\NewLayer.cs" />
+    <Compile Include="Layers\NewPointLayer.cs" />
+    <Compile Include="Layers\SnapEdits.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gis\MapTool.cs" />
+    <Compile Include="Gis\MapWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gis\MapWindow.Designer.cs">
+      <DependentUpon>MapWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Project\Const.cs" />
+    <Compile Include="Project\NewProject.cs" />
+    <Compile Include="Project\NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\OpenProject.cs" />
+    <Compile Include="Project\ProjectionSelectionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Project\ProjectionSelectionPanel.designer.cs">
+      <DependentUpon>ProjectionSelectionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\ProjectManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UiImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UiImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLog.cs" />
+    <EmbeddedResource Include="Gis\Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gis\WebMap\Resources\Resources.resx" />
+    <EmbeddedResource Include="Gis\WebMap\WMS\WMSServerParameters.resx" />
+    <EmbeddedResource Include="Layers\LayerDefinition.resx">
+      <DependentUpon>LayerDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gis\MapWindow.resx">
+      <DependentUpon>MapWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\ProjectionSelectionPanel.resx">
+      <DependentUpon>ProjectionSelectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UiImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UiImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RVRMeander.Gui.Gis\RVRMeander.Gui.Gis.csproj">
+      <Project>{137cd66c-a2f5-40de-8b3d-d801a576da07}</Project>
+      <Name>RVRMeander.Gui.Gis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RVRMeander.Core\RVRMeander.Core.csproj">
+      <Project>{b386ebeb-7539-4a17-9a5a-5ee305e5704e}</Project>
+      <Name>RVRMeander.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RVRMeander.Log\RVRMeander.Log.csproj">
+      <Project>{908b891d-b1b0-4a81-92e4-d7c66d2a18d1}</Project>
+      <Name>RVRMeander.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RVRMeander.Model.Mc\RVRMeander.Model.Mc.csproj">
+      <Project>{1e5128a9-383b-4114-b96e-8f7d5dcb4787}</Project>
+      <Name>RVRMeander.Model.Ec</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RVRMeander.Model.Geometry.SpatiaLite.Helper\RVRMeander.Model.Geometry.SpatiaLite.Helper.csproj">
+      <Project>{455fd04e-634f-40ed-b805-450bee035069}</Project>
+      <Name>RVRMeander.Model.Geometry.SpatiaLite.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RVRMeander.Model.Geometry.SpatiaLite\RVRMeander.Model.Geometry.SpatiaLite.csproj">
+      <Project>{05f7450a-690f-4c05-8d56-a213619489cb}</Project>
+      <Name>RVRMeander.Model.Geometry.SpatiaLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RVRMeander.Utils\RVRMeander.Utils.csproj">
+      <Project>{cb776668-70eb-4401-9abc-8418b0cc538b}</Project>
+      <Name>RVRMeander.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\adddata_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\adddata_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\coord_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\coord_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\fullextent_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\fullextent_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\info_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\info_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\pan_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\pan_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\select_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\select_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\zoom_16xLG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\zoom_32xLG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\ZoomOut_16xlG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gis\images\ZoomOut_32xlG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

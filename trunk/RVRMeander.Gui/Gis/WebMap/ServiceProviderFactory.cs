@@ -1,0 +1,128 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using BruTile;
+using BruTile.Cache;
+using BruTile.Predefined;
+using BruTile.Web;
+using RVRMeander.Gui.Gis.WebMap.Configuration;
+using RVRMeander.Gui.Gis.WebMap.WMS;
+//using Resources = RVRMeander.Gui.Gis.WebMap.Resources.Resources;
+
+namespace RVRMeander.Gui.Gis.WebMap
+{
+  public static class ServiceProviderFactory
+  {
+    public static IEnumerable<ServiceProvider> GetDefaultServiceProviders()
+    {
+      WebMapConfigurationSection section = null;
+      try
+      {
+        var config = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
+        section = (WebMapConfigurationSection)config.GetSection("webMapConfigurationSection");
+      }
+      catch (Exception e)
+      {
+        Debug.Write("Section webMapConfigurationSection not found: " + e);
+      }
+
+      if (section != null)
+      {
+        foreach (ServiceProviderElement service in section.Services)
+        {
+          if (service.Ignore) continue;
+          var name = Resources.Resources.ResourceManager.GetString(service.Key) ?? service.Key;
+          yield return Create(name, service.Url);
+        }
+
+      }
+      else
+      {
+        // Default services which used when config section not found
+        yield return Create(Resources.Resources.EsriHydroBaseMap);
+        //yield return Create(Resources.Resources.EsriWorldStreetMap);
+        yield return Create(Resources.Resources.EsriWorldImagery);
+        //yield return Create(Resources.Resources.EsriWorldTopo);
+        //yield return Create(Resources.Resources.BingRoads);
+        yield return Create(Resources.Resources.BingAerial);
+        //yield return Create(Resources.Resources.BingHybrid);
+        //yield return Create(Resources.Resources.GoogleMap);
+        //yield return Create(Resources.Resources.GoogleLabels);
+        //yield return Create(Resources.Resources.GoogleTerrain);
+        yield return Create(Resources.Resources.OpenStreetMap);
+        //yield return Create(Resources.Resources.WMSMap);
+      }
+    }
+
+    public static ServiceProvider Create(string name, string url = null)
+    {
+      var servEq = (Func<string, bool>)
+          (s => name.Equals(s, StringComparison.InvariantCultureIgnoreCase));
+
+      var fileCache =
+          (Func<ITileCache<byte[]>>)
+              (() => new FileCache(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                      "TileCache", name), "", new TimeSpan(30, 0, 0, 0)));
+
+      if (servEq(Resources.Resources.EsriHydroBaseMap))
+      {
+        return new BrutileServiceProvider(name,
+            new ArcGisTileSource("http://hydrology.esri.com/arcgis/rest/services/WorldHydroReferenceOverlay/MapServer",
+                new GlobalSphericalMercator()), fileCache());
+      }
+      if (servEq(Resources.Resources.EsriWorldStreetMap))
+      {
+        return new BrutileServiceProvider(name, new ArcGisTileSource("http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/",
+            new GlobalSphericalMercator()), fileCache());
+      }
+      if (servEq(Resources.Resources.EsriWorldImagery))
+      {
+        return new BrutileServiceProvider(name,
+            new ArcGisTileSource("http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+                new GlobalSphericalMercator()), fileCache());
+      }
+      if (servEq(Resources.Resources.EsriWorldTopo))
+      {
+        return new BrutileServiceProvider(name, KnownTileSources.Create(KnownTileSource.EsriWorldTopo), fileCache());
+      }
+      if (servEq(Resources.Resources.BingHybrid))
+      {
+        return new BrutileServiceProvider(name, KnownTileSources.Create(KnownTileSource.BingHybrid), fileCache());
+      }
+      if (servEq(Resources.Resources.BingAerial))
+      {
+        return new BrutileServiceProvider(name, KnownTileSources.Create(KnownTileSource.BingAerial), fileCache());
+      }
+      if (servEq(Resources.Resources.BingRoads))
+      {
+        return new BrutileServiceProvider(name, KnownTileSources.Create(KnownTileSource.BingRoads), fileCache());
+      }
+      //if (servEq(Resources.Resources.GoogleMap))
+      //{
+      //  return new BrutileServiceProvider(name, new GoogleTileSource(GoogleMapType.GoogleMap), fileCache());
+      //}
+      //if (servEq(Resources.Resources.GoogleLabels))
+      //{
+      //  return new BrutileServiceProvider(name, new GoogleTileSource(GoogleMapType.GoogleLabels), fileCache());
+      //}
+      //if (servEq(Resources.Resources.GoogleTerrain))
+      //{
+      //  return new BrutileServiceProvider(name, new GoogleTileSource(GoogleMapType.GoogleTerrain), fileCache());
+      //}
+      if (servEq(Resources.Resources.OpenStreetMap))
+      {
+        return new BrutileServiceProvider(name, KnownTileSources.Create(KnownTileSource.OpenStreetMap), fileCache());
+      }
+      if (servEq(Resources.Resources.WMSMap))
+      {
+        return new WmsServiceProvider(name);
+      }
+
+      // No Match
+      return new OtherServiceProvider(name, url);
+    }
+  }
+}

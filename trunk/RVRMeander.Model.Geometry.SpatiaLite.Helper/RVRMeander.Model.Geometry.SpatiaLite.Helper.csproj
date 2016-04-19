@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{455FD04E-634F-40ED-B805-450BEE035069}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RVRMeander.Model.Geometry.SpatiaLite.Helper</RootNamespace>
+    <AssemblyName>RVRMeander.Model.Geometry.SpatiaLite.Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotSpatial.Data">
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Projections">
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Projections.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Topology">
+      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Topology.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.81.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\contrib\sqlite\sqlite-netFx45-static-binary-2012-1.0.96.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Column.cs" />
+    <Compile Include="CoordinateDimension.cs" />
+    <Compile Include="FeatureSetTableInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpatiaLiteFeatureSet.cs" />
+    <Compile Include="SpatiaLiteHelper.cs" />
+    <Compile Include="SpatiaLiteWkbReader.cs" />
+    <Compile Include="SpatiaLiteWkbWriter.cs" />
+    <Compile Include="SQLiteDataType.cs" />
+    <Compile Include="SQLiteHelper.cs" />
+    <Compile Include="SQLiteTableMetadata.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RVRMeander.Log\RVRMeander.Log.csproj">
+      <Project>{908b891d-b1b0-4a81-92e4-d7c66d2a18d1}</Project>
+      <Name>RVRMeander.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libfreexl-1.dll">
+      <Link>x64\libfreexl-1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libgcc_s_seh_64-1.dll">
+      <Link>x64\libgcc_s_seh_64-1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libgeos-3-4-2.dll">
+      <Link>x64\libgeos-3-4-2.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libgeos_c-1.dll">
+      <Link>x64\libgeos_c-1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libiconv-2.dll">
+      <Link>x64\libiconv-2.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\liblzma-5.dll">
+      <Link>x64\liblzma-5.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libproj-0.dll">
+      <Link>x64\libproj-0.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libstdc++_64-6.dll">
+      <Link>x64\libstdc++_64-6.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\libxml2-2.dll">
+      <Link>x64\libxml2-2.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\mod_spatialite.dll">
+      <Link>x64\mod_spatialite.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-amd64\zlib1.dll">
+      <Link>x64\zlib1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libfreexl-1.dll">
+      <Link>x86\libfreexl-1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libgcc_s_dw2-1.dll">
+      <Link>x86\libgcc_s_dw2-1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libgeos-3-4-2.dll">
+      <Link>x86\libgeos-3-4-2.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libgeos_c-1.dll">
+      <Link>x86\libgeos_c-1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libiconv-2.dll">
+      <Link>x86\libiconv-2.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\liblzma-5.dll">
+      <Link>x86\liblzma-5.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libproj-0.dll">
+      <Link>x86\libproj-0.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libstdc++-6.dll">
+      <Link>x86\libstdc++-6.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\libxml2-2.dll">
+      <Link>x86\libxml2-2.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\mod_spatialite.dll">
+      <Link>x86\mod_spatialite.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\spatialite\mod_spatialite-4.2.0-win-x86\zlib1.dll">
+      <Link>x86\zlib1.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\sqlite\sqlite-netFx45-static-binary-2012-1.0.96.0\x64\SQLite.Interop.dll">
+      <Link>x64\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\sqlite\sqlite-netFx45-static-binary-2012-1.0.96.0\x64\SQLite.Interop.pdb">
+      <Link>x64\SQLite.Interop.pdb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\sqlite\sqlite-netFx45-static-binary-2012-1.0.96.0\x86\SQLite.Interop.dll">
+      <Link>x86\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\contrib\sqlite\sqlite-netFx45-static-binary-2012-1.0.96.0\x86\SQLite.Interop.pdb">
+      <Link>x86\SQLite.Interop.pdb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
