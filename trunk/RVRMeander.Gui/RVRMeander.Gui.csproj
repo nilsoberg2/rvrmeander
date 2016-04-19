@@ -76,30 +76,30 @@
     </Reference>
     <Reference Include="DotSpatial.Controls, Version=1.7.0.0, Culture=neutral, PublicKeyToken=4d9e49339a7d240c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Controls.dll</HintPath>
+      <HintPath>..\..\contrib\DotSpatial-1.8\DotSpatial.Controls.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Data, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c29dbf30e059ca9d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Data.dll</HintPath>
+      <HintPath>..\..\contrib\DotSpatial-1.8\DotSpatial.Data.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Data.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=53ab5a198378d4c1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Data.Forms.dll</HintPath>
+      <HintPath>..\..\contrib\DotSpatial-1.8\DotSpatial.Data.Forms.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Plugins.ShapeEditor">
-      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\Plugins\DotSpatial.Plugins.ShapeEditor\DotSpatial.Plugins.ShapeEditor.dll</HintPath>
+      <HintPath>..\..\contrib\DotSpatial-1.8\Plugins\DotSpatial.Plugins.ShapeEditor\DotSpatial.Plugins.ShapeEditor.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Projections, Version=1.7.0.0, Culture=neutral, PublicKeyToken=272632bddd08a38b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Projections.dll</HintPath>
+      <HintPath>..\..\contrib\DotSpatial-1.8\DotSpatial.Projections.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Symbology, Version=1.7.0.0, Culture=neutral, PublicKeyToken=6178c08da7998387, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Symbology.dll</HintPath>
+      <HintPath>..\..\contrib\DotSpatial-1.8\DotSpatial.Symbology.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Topology, Version=1.8.0.0, Culture=neutral, PublicKeyToken=a66b5e9434ca3671, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\metroflow-2-spatial\DotSpatial-1.8\DotSpatial.Topology.dll</HintPath>
+      <HintPath>..\..\contrib\DotSpatial-1.8\DotSpatial.Topology.dll</HintPath>
     </Reference>
     <Reference Include="MRG.Controls.UI">
       <HintPath>..\..\contrib\LoadingCircle\MRG.Controls.UI\bin\Release\MRG.Controls.UI.dll</HintPath>
