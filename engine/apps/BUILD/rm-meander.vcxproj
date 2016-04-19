@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Static|Win32">
+      <Configuration>Debug_Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Static|Win32">
+      <Configuration>Release_Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7120BF8C-A69C-4EEC-BA15-33F4D703BDFB}</ProjectGuid>
+    <RootNamespace>rmmeander</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Debug\</OutDir>
+    <IntDir>INT_$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>RVRMeander</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Release\</OutDir>
+    <IntDir>INT_$(Configuration)\\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>RVRMeander</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>INT_$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>RVRMeander</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>INT_$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>RVRMeander</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\contrib\inih_r7\cpp;..\..\..\contrib\libconfig-1.3.1;..\..\..\contrib\gsl-1.10;..\..\..\contrib\gsl-1.10\build.vc8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;RMMEANDERDLL_EXPORTS;INIH_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>inih.lib;libconfig++.lib;librmbankerosion.lib;librmfilter.lib;librmhydrodynamics.lib;librmio.lib;librmmigration.lib;librmplotting.lib;librmprep.lib;librmutil.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)RVRMeander.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\contrib\libconfig-1.3.1\$(Configuration);..\..\..\contrib\gsl-1.10\build.vc8\lib\win32\release;$(SolutionDir)\$(Configuration);..\..\..\contrib\inih_r7\vc2005\Debug Static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\contrib\inih_r7\cpp;..\..\..\contrib\libconfig-1.3.1;..\..\..\contrib\gsl-1.10;..\..\..\contrib\gsl-1.10\build.vc8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;RMMEANDERDLL_EXPORTS;INIH_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>inih.lib;libconfig++.lib;librmbankerosion.lib;librmfilter.lib;librmhydrodynamics.lib;librmio.lib;librmmigration.lib;librmplotting.lib;librmprep.lib;librmutil.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)RVRMeander.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\contrib\libconfig-1.3.1\$(Configuration);..\..\..\contrib\gsl-1.10\build.vc8\lib\win32\release;$(SolutionDir)\$(Configuration);..\..\..\contrib\inih_r7\vc2005\Release Static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\contrib\inih_r7\cpp;..\..\..\contrib\libconfig-1.3.1;..\..\..\contrib\gsl-1.10;..\..\..\contrib\gsl-1.10\build.vc8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;RMMEANDERDLL_EXPORTS;LIBRMBANKEROSION_STATIC;LIBRMFILTER_STATIC;LIBRMHYDRODYNAMICS_STATIC;LIBRMIO_STATIC;LIBRMMIGRATION_STATIC;LIBRMPLOTTING_STATIC;LIBPREP_STATIC;LIBRMUTIL_STATIC;LIBCONFIG_STATIC;INIH_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>inih.lib;libconfig++.lib;librmbankerosion.lib;librmfilter.lib;librmhydrodynamics.lib;librmio.lib;librmmigration.lib;librmplotting.lib;librmprep.lib;librmutil.lib;gsl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)RVRMeander.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\contrib\gsl-1.10\build.vc8\lib\win32\release;$(SolutionDir)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\contrib\inih_r7\cpp;..\..\..\contrib\libconfig-1.3.1;..\..\..\contrib\gsl-1.10;..\..\..\contrib\gsl-1.10\build.vc8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;RMMEANDERDLL_EXPORTS;LIBRMBANKEROSION_STATIC;LIBRMFILTER_STATIC;LIBRMHYDRODYNAMICS_STATIC;LIBRMIO_STATIC;LIBRMMIGRATION_STATIC;LIBRMPLOTTING_STATIC;LIBPREP_STATIC;LIBRMUTIL_STATIC;LIBCONFIG_STATIC;INIH_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>inih.lib;libconfig++.lib;librmbankerosion.lib;librmfilter.lib;librmhydrodynamics.lib;librmio.lib;librmmigration.lib;librmplotting.lib;librmprep.lib;librmutil.lib;gsl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)RVRMeander.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\contrib\gsl-1.10\build.vc8\lib\win32\release;$(SolutionDir)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cf_bankerosion.cpp" />
+    <ClCompile Include="..\cf_channel.cpp" />
+    <ClCompile Include="..\cf_hydrodynamics.cpp" />
+    <ClCompile Include="..\cf_migration.cpp" />
+    <ClCompile Include="..\cf_plotting.cpp" />
+    <ClCompile Include="..\cf_preprocessing.cpp" />
+    <ClCompile Include="..\cf_smoothing.cpp" />
+    <ClCompile Include="..\config_file.cpp" />
+    <ClCompile Include="..\initialization.cpp" />
+    <ClCompile Include="..\interface.cpp" />
+    <ClCompile Include="..\printing.cpp" />
+    <ClCompile Include="..\rvrmeander.cpp" />
+    <ClCompile Include="..\util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\cf_bankerosion.h" />
+    <ClInclude Include="..\cf_channel.h" />
+    <ClInclude Include="..\cf_hydrodynamics.h" />
+    <ClInclude Include="..\cf_migration.h" />
+    <ClInclude Include="..\cf_plotting.h" />
+    <ClInclude Include="..\cf_preprocessing.h" />
+    <ClInclude Include="..\cf_smoothing.h" />
+    <ClInclude Include="..\..\common.h" />
+    <ClInclude Include="..\config_file.h" />
+    <ClInclude Include="..\config_file_obj.h" />
+    <ClInclude Include="..\config_file_util.h" />
+    <ClInclude Include="..\..\rmdebug\debug_printing.h" />
+    <ClInclude Include="..\enums.h" />
+    <ClInclude Include="..\error.h" />
+    <ClInclude Include="..\interface.h" />
+    <ClInclude Include="..\rundata.h" />
+    <ClInclude Include="..\rvrmeander.h" />
+    <ClInclude Include="..\smoothing.h" />
+    <ClInclude Include="..\..\timer.h" />
+    <ClInclude Include="..\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\contrib\inih_r7\VC\inih.vcxproj">
+      <Project>{ad7c247f-71a0-4d68-9dc0-aacbdcc580bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\contrib\libconfig-1.3.1\libconfig++.vcxproj">
+      <Project>{a0c36ce7-d908-4573-8b69-249eeeb7d2be}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmbankerosion\VC\librmbankerosion.vcxproj">
+      <Project>{b497a570-f0fa-44e0-8130-4fa146698d26}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmfilter\VC\librmfilter.vcxproj">
+      <Project>{fef327cc-0a9b-46cc-aa6f-6a3449f755f8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmhydrodynamics\VC\librmhydrodynamics.vcxproj">
+      <Project>{405d31ca-2edf-4dd7-8a20-e9161a2d1fb2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmio\VC\librmio.vcxproj">
+      <Project>{44f99bd0-43b6-4a8d-9e49-4086879b1449}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmmigration\VC\librmmigration.vcxproj">
+      <Project>{590c3c68-2d62-45d4-abfb-36fa95e8951c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmplotting\VC\librmplotting.vcxproj">
+      <Project>{576f7031-3e65-4037-95e5-b9254f925a7d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmprep\VC\librmprep.vcxproj">
+      <Project>{0e16330f-d7c3-4753-a615-b71b180e4c02}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rmutil\VC\librmutil.vcxproj">
+      <Project>{be90cfab-a7cc-4842-8954-634ae1136afd}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

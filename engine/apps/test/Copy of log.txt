@@ -1,0 +1,2443 @@
+
+****************************************************************** 
+RVR Meander 2009 
+****************************************************************** 
+
+****************************************************************** 
+CHANNEL PARAMETERS 
+Flow rate (m3/s) = 46.200000 
+(Initial) width (m) = 38.000000 
+Sediment size (m) = 0.060000 
+Water density (kg/m3) = 1000.000000 
+Valley slope = 0.000900 
+Mean bed elevation at the upstream end (m) = 0.000000 
+Number of nodes (streamwise) = 350 
+Number of nodes (transverse) = 51 
+****************************************************************** 
+
+****************************************************************** 
+PREPROCESSING 
+Method for computing curvature = 1 
+Method for computing curvature at upstream end = 1 
+Method for computing curvature at downstream end = 1 
+****************************************************************** 
+
+****************************************************************** 
+HYDRODYNAMICS 
+Method for computing hydrodynamics at downstream end = 1 
+Manning's roughness coefficient = 0.029520 
+****************************************************************** 
+
+****************************************************************** 
+BANK EROSION 
+Method for computing bank evolution = migration coefficient 
+Migration coefficient, parameters: 
+	Bank erosion coefficient = 5.000000e-007 
+	FACTR = -6277438562204192500000000000000000000000000000000000000000000000000.000000 (calculated) 
+****************************************************************** 
+
+****************************************************************** 
+MIGRATION 
+Duration (years) = 37.000000 
+Number of iterations = 185 
+Time step (days) = 73.000000 (calculated) 
+Number of iterations to filter = 10 
+Number of iterations to plot = 5 
+Switch for the migration at upstream end = 1 
+Switch for the migration at downstream end = 1 
+Threshold for cutoff (number of half widths) = 1.000000 
+****************************************************************** 
+
+****************************************************************** 
+SMOOTHING 
+Switch for initial splines on centerline = 0
+Smoothing order = 2
+Switch for curvature filtering = 1 
+Number of filter applications (each time) = 1 
+Savitzky-Golay filter, parameters: 
+	Order of the polynomial = 2 
+	Number of nodes included in the filter window = 5 
+
+****************************************************************** 
+
+*****************************************************************************
+Iteration 1 of 185 (t = 0.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.428727, ds/B = 0.601512 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000670 
+Iteration = 3, D_ch = 1.212911, U_ch = 1.002373
+F02_ch = 0.084471, Cf_ch = 0.007936, Beta_ch = 15.664796
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.906474
+TecPlot1D (initial) 
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.604274, ds/B = 0.610751 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 2 of 185 (t = 0.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.446264, ds/B = 0.602435 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000669 
+Iteration = 3, D_ch = 1.213618, U_ch = 1.001789
+F02_ch = 0.084324, Cf_ch = 0.007934, Beta_ch = 15.655668
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.905868
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.624422, ds/B = 0.611812 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 3 of 185 (t = 0.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.469559, ds/B = 0.603661 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000668 
+Iteration = 3, D_ch = 1.214332, U_ch = 1.001201
+F02_ch = 0.084175, Cf_ch = 0.007932, Beta_ch = 15.646468
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.905256
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.647453, ds/B = 0.613024 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 4 of 185 (t = 0.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.493064, ds/B = 0.604898 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000666 
+Iteration = 3, D_ch = 1.215052, U_ch = 1.000607
+F02_ch = 0.084026, Cf_ch = 0.007930, Beta_ch = 15.637195
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.904640
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.670447, ds/B = 0.614234 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 5 of 185 (t = 1.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.516771, ds/B = 0.606146 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000665 
+Iteration = 3, D_ch = 1.215778, U_ch = 1.000009
+F02_ch = 0.083875, Cf_ch = 0.007928, Beta_ch = 15.627852
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.904020
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.693460, ds/B = 0.615445 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 6 of 185 (t = 1.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.540678, ds/B = 0.607404 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000664 
+Iteration = 3, D_ch = 1.216510, U_ch = 0.999407
+F02_ch = 0.083724, Cf_ch = 0.007925, Beta_ch = 15.618444
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.903395
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.716533, ds/B = 0.616660 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 7 of 185 (t = 1.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.564781, ds/B = 0.608673 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000662 
+Iteration = 3, D_ch = 1.217249, U_ch = 0.998801
+F02_ch = 0.083571, Cf_ch = 0.007923, Beta_ch = 15.608972
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.902766
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.740215, ds/B = 0.617906 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 8 of 185 (t = 1.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.589075, ds/B = 0.609951 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000661 
+Iteration = 3, D_ch = 1.217993, U_ch = 0.998191
+F02_ch = 0.083418, Cf_ch = 0.007921, Beta_ch = 15.599438
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.902132
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.765030, ds/B = 0.619212 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 9 of 185 (t = 1.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.613564, ds/B = 0.611240 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000659 
+Iteration = 3, D_ch = 1.218742, U_ch = 0.997577
+F02_ch = 0.083265, Cf_ch = 0.007919, Beta_ch = 15.589844
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.901495
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.789872, ds/B = 0.620520 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 10 of 185 (t = 2.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.638245, ds/B = 0.612539 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000658 
+Iteration = 3, D_ch = 1.219497, U_ch = 0.996960
+F02_ch = 0.083110, Cf_ch = 0.007917, Beta_ch = 15.580192
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.900854
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.814767, ds/B = 0.621830 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 11 of 185 (t = 2.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.663113, ds/B = 0.613848 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000657 
+Iteration = 3, D_ch = 1.220258, U_ch = 0.996338
+F02_ch = 0.082955, Cf_ch = 0.007915, Beta_ch = 15.570482
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.900210
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.839737, ds/B = 0.623144 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 12 of 185 (t = 2.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.688169, ds/B = 0.615167 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000655 
+Iteration = 3, D_ch = 1.221024, U_ch = 0.995713
+F02_ch = 0.082799, Cf_ch = 0.007912, Beta_ch = 15.560716
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.899561
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.864798, ds/B = 0.624463 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 13 of 185 (t = 2.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.713417, ds/B = 0.616496 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000654 
+Iteration = 3, D_ch = 1.221795, U_ch = 0.995085
+F02_ch = 0.082642, Cf_ch = 0.007910, Beta_ch = 15.550895
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.898910
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.889964, ds/B = 0.625788 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 14 of 185 (t = 2.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.738848, ds/B = 0.617834 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000652 
+Iteration = 3, D_ch = 1.222571, U_ch = 0.994453
+F02_ch = 0.082485, Cf_ch = 0.007908, Beta_ch = 15.541020
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.898254
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.915246, ds/B = 0.627118 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 15 of 185 (t = 3.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.764464, ds/B = 0.619182 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000651 
+Iteration = 3, D_ch = 1.223352, U_ch = 0.993818
+F02_ch = 0.082327, Cf_ch = 0.007906, Beta_ch = 15.531092
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.897595
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.940650, ds/B = 0.628455 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 16 of 185 (t = 3.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.790270, ds/B = 0.620541 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000649 
+Iteration = 3, D_ch = 1.224139, U_ch = 0.993179
+F02_ch = 0.082168, Cf_ch = 0.007903, Beta_ch = 15.521113
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.896933
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.966185, ds/B = 0.629799 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 17 of 185 (t = 3.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.816259, ds/B = 0.621908 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000648 
+Iteration = 3, D_ch = 1.224931, U_ch = 0.992537
+F02_ch = 0.082009, Cf_ch = 0.007901, Beta_ch = 15.511083
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.896268
+Splines, No Filter on Centerline 
+	Max ds (m)= 11.991852, ds/B = 0.631150 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 18 of 185 (t = 3.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.842430, ds/B = 0.623286 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000647 
+Iteration = 3, D_ch = 1.225727, U_ch = 0.991892
+F02_ch = 0.081849, Cf_ch = 0.007899, Beta_ch = 15.501003
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.895599
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.018327, ds/B = 0.632544 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 19 of 185 (t = 3.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.868786, ds/B = 0.624673 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000645 
+Iteration = 3, D_ch = 1.226528, U_ch = 0.991244
+F02_ch = 0.081689, Cf_ch = 0.007897, Beta_ch = 15.490875
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.894927
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.045197, ds/B = 0.633958 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 20 of 185 (t = 4.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.895327, ds/B = 0.626070 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000644 
+Iteration = 3, D_ch = 1.227335, U_ch = 0.990593
+F02_ch = 0.081528, Cf_ch = 0.007894, Beta_ch = 15.480700
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.894252
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.072183, ds/B = 0.635378 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 21 of 185 (t = 4.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.922049, ds/B = 0.627476 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000642 
+Iteration = 3, D_ch = 1.228146, U_ch = 0.989939
+F02_ch = 0.081367, Cf_ch = 0.007892, Beta_ch = 15.470479
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.893575
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.099289, ds/B = 0.636805 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 22 of 185 (t = 4.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.948951, ds/B = 0.628892 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000641 
+Iteration = 3, D_ch = 1.228961, U_ch = 0.989282
+F02_ch = 0.081205, Cf_ch = 0.007890, Beta_ch = 15.460212
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.892894
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.126519, ds/B = 0.638238 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 23 of 185 (t = 4.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 11.976037, ds/B = 0.630318 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000639 
+Iteration = 3, D_ch = 1.229781, U_ch = 0.988623
+F02_ch = 0.081042, Cf_ch = 0.007887, Beta_ch = 15.449902
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.892210
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.153876, ds/B = 0.639678 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 24 of 185 (t = 4.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.003304, ds/B = 0.631753 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000638 
+Iteration = 3, D_ch = 1.230606, U_ch = 0.987960
+F02_ch = 0.080880, Cf_ch = 0.007885, Beta_ch = 15.439548
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.891524
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.181362, ds/B = 0.641124 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 25 of 185 (t = 5.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.030750, ds/B = 0.633197 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000636 
+Iteration = 3, D_ch = 1.231435, U_ch = 0.987295
+F02_ch = 0.080716, Cf_ch = 0.007883, Beta_ch = 15.429153
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.890835
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.208979, ds/B = 0.642578 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 26 of 185 (t = 5.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.058373, ds/B = 0.634651 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000635 
+Iteration = 3, D_ch = 1.232269, U_ch = 0.986627
+F02_ch = 0.080553, Cf_ch = 0.007880, Beta_ch = 15.418717
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.890143
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.236728, ds/B = 0.644038 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 27 of 185 (t = 5.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.086181, ds/B = 0.636115 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000633 
+Iteration = 4, D_ch = 1.233106, U_ch = 0.985957
+F02_ch = 0.080389, Cf_ch = 0.007878, Beta_ch = 15.408241
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.889449
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.264610, ds/B = 0.645506 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 28 of 185 (t = 5.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.114167, ds/B = 0.637588 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000632 
+Iteration = 4, D_ch = 1.233948, U_ch = 0.985284
+F02_ch = 0.080224, Cf_ch = 0.007876, Beta_ch = 15.397728
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.888752
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.292625, ds/B = 0.646980 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 29 of 185 (t = 5.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.142331, ds/B = 0.639070 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000630 
+Iteration = 4, D_ch = 1.234794, U_ch = 0.984609
+F02_ch = 0.080059, Cf_ch = 0.007873, Beta_ch = 15.387176
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.888053
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.320773, ds/B = 0.648462 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 30 of 185 (t = 6.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.170671, ds/B = 0.640562 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000629 
+Iteration = 4, D_ch = 1.235645, U_ch = 0.983931
+F02_ch = 0.079894, Cf_ch = 0.007871, Beta_ch = 15.376589
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.887352
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.349056, ds/B = 0.649950 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 31 of 185 (t = 6.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.199188, ds/B = 0.642063 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000627 
+Iteration = 4, D_ch = 1.236499, U_ch = 0.983252
+F02_ch = 0.079729, Cf_ch = 0.007868, Beta_ch = 15.365966
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.886648
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.377493, ds/B = 0.651447 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 32 of 185 (t = 6.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.227880, ds/B = 0.643573 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000626 
+Iteration = 4, D_ch = 1.237357, U_ch = 0.982570
+F02_ch = 0.079563, Cf_ch = 0.007866, Beta_ch = 15.355309
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.885942
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.406723, ds/B = 0.652985 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 33 of 185 (t = 6.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.256747, ds/B = 0.645092 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000624 
+Iteration = 4, D_ch = 1.238219, U_ch = 0.981886
+F02_ch = 0.079397, Cf_ch = 0.007863, Beta_ch = 15.344620
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.885235
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.436081, ds/B = 0.654531 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 34 of 185 (t = 6.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.285788, ds/B = 0.646620 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000623 
+Iteration = 4, D_ch = 1.239085, U_ch = 0.981200
+F02_ch = 0.079231, Cf_ch = 0.007861, Beta_ch = 15.333898
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.884525
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.465568, ds/B = 0.656083 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 35 of 185 (t = 7.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.315002, ds/B = 0.648158 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000621 
+Iteration = 4, D_ch = 1.239954, U_ch = 0.980512
+F02_ch = 0.079064, Cf_ch = 0.007859, Beta_ch = 15.323145
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.883813
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.495186, ds/B = 0.657641 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 36 of 185 (t = 7.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.344387, ds/B = 0.649705 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000620 
+Iteration = 4, D_ch = 1.240827, U_ch = 0.979822
+F02_ch = 0.078897, Cf_ch = 0.007856, Beta_ch = 15.312363
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.883099
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.524934, ds/B = 0.659207 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 37 of 185 (t = 7.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.373944, ds/B = 0.651260 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000618 
+Iteration = 4, D_ch = 1.241704, U_ch = 0.979130
+F02_ch = 0.078730, Cf_ch = 0.007854, Beta_ch = 15.301551
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.882383
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.554812, ds/B = 0.660780 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 38 of 185 (t = 7.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.403672, ds/B = 0.652825 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000617 
+Iteration = 4, D_ch = 1.242584, U_ch = 0.978436
+F02_ch = 0.078563, Cf_ch = 0.007851, Beta_ch = 15.290712
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.881666
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.584821, ds/B = 0.662359 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 39 of 185 (t = 7.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.433569, ds/B = 0.654398 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000615 
+Iteration = 4, D_ch = 1.243468, U_ch = 0.977741
+F02_ch = 0.078396, Cf_ch = 0.007849, Beta_ch = 15.279846
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.880947
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.614961, ds/B = 0.663945 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 40 of 185 (t = 8.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.463634, ds/B = 0.655981 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000614 
+Iteration = 4, D_ch = 1.244355, U_ch = 0.977044
+F02_ch = 0.078228, Cf_ch = 0.007846, Beta_ch = 15.268953
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.880226
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.645232, ds/B = 0.665539 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 41 of 185 (t = 8.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.493867, ds/B = 0.657572 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000612 
+Iteration = 4, D_ch = 1.245246, U_ch = 0.976345
+F02_ch = 0.078060, Cf_ch = 0.007844, Beta_ch = 15.258035
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.879504
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.675634, ds/B = 0.667139 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 42 of 185 (t = 8.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.524266, ds/B = 0.659172 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000611 
+Iteration = 4, D_ch = 1.246139, U_ch = 0.975645
+F02_ch = 0.077893, Cf_ch = 0.007841, Beta_ch = 15.247093
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.878780
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.706168, ds/B = 0.668746 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 43 of 185 (t = 8.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.554831, ds/B = 0.660781 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000609 
+Iteration = 4, D_ch = 1.247036, U_ch = 0.974943
+F02_ch = 0.077725, Cf_ch = 0.007839, Beta_ch = 15.236128
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.878055
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.736833, ds/B = 0.670360 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 44 of 185 (t = 8.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.585560, ds/B = 0.662398 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000608 
+Iteration = 4, D_ch = 1.247936, U_ch = 0.974240
+F02_ch = 0.077557, Cf_ch = 0.007836, Beta_ch = 15.225139
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.877328
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.767630, ds/B = 0.671981 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 45 of 185 (t = 9.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.616453, ds/B = 0.664024 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000606 
+Iteration = 4, D_ch = 1.248839, U_ch = 0.973536
+F02_ch = 0.077389, Cf_ch = 0.007834, Beta_ch = 15.214129
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.876600
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.798558, ds/B = 0.673608 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 46 of 185 (t = 9.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.647509, ds/B = 0.665658 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000605 
+Iteration = 4, D_ch = 1.249745, U_ch = 0.972830
+F02_ch = 0.077220, Cf_ch = 0.007831, Beta_ch = 15.203098
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.875871
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.829618, ds/B = 0.675243 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 47 of 185 (t = 9.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.678726, ds/B = 0.667301 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000603 
+Iteration = 4, D_ch = 1.250654, U_ch = 0.972123
+F02_ch = 0.077052, Cf_ch = 0.007829, Beta_ch = 15.192046
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.875141
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.860810, ds/B = 0.676885 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 48 of 185 (t = 9.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.710103, ds/B = 0.668953 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000602 
+Iteration = 4, D_ch = 1.251567, U_ch = 0.971414
+F02_ch = 0.076884, Cf_ch = 0.007826, Beta_ch = 15.180974
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.874409
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.892134, ds/B = 0.678533 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 49 of 185 (t = 9.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.741640, ds/B = 0.670613 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000600 
+Iteration = 4, D_ch = 1.252482, U_ch = 0.970704
+F02_ch = 0.076715, Cf_ch = 0.007824, Beta_ch = 15.169884
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.873676
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.923949, ds/B = 0.680208 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 50 of 185 (t = 10.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.773336, ds/B = 0.672281 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000599 
+Iteration = 4, D_ch = 1.253399, U_ch = 0.969994
+F02_ch = 0.076547, Cf_ch = 0.007821, Beta_ch = 15.158775
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.872942
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.956017, ds/B = 0.681896 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 51 of 185 (t = 10.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.805199, ds/B = 0.673958 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000597 
+Iteration = 4, D_ch = 1.254320, U_ch = 0.969282
+F02_ch = 0.076378, Cf_ch = 0.007819, Beta_ch = 15.147649
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.872207
+Splines, No Filter on Centerline 
+	Max ds (m)= 12.988212, ds/B = 0.683590 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 52 of 185 (t = 10.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.837218, ds/B = 0.675643 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000596 
+Iteration = 4, D_ch = 1.255243, U_ch = 0.968569
+F02_ch = 0.076210, Cf_ch = 0.007816, Beta_ch = 15.136506
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.871471
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.020535, ds/B = 0.685291 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 53 of 185 (t = 10.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.869394, ds/B = 0.677337 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000594 
+Iteration = 4, D_ch = 1.256170, U_ch = 0.967855
+F02_ch = 0.076042, Cf_ch = 0.007814, Beta_ch = 15.125346
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.870733
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.052985, ds/B = 0.686999 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 54 of 185 (t = 10.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.901724, ds/B = 0.679038 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000593 
+Iteration = 4, D_ch = 1.257098, U_ch = 0.967139
+F02_ch = 0.075873, Cf_ch = 0.007811, Beta_ch = 15.114171
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.869995
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.085563, ds/B = 0.688714 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 55 of 185 (t = 11.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.934208, ds/B = 0.680748 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000591 
+Iteration = 4, D_ch = 1.258030, U_ch = 0.966423
+F02_ch = 0.075705, Cf_ch = 0.007808, Beta_ch = 15.102981
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.869256
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.118267, ds/B = 0.690435 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 56 of 185 (t = 11.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.966844, ds/B = 0.682465 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000590 
+Iteration = 4, D_ch = 1.258964, U_ch = 0.965706
+F02_ch = 0.075536, Cf_ch = 0.007806, Beta_ch = 15.091777
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.868517
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.151100, ds/B = 0.692163 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 57 of 185 (t = 11.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 12.999632, ds/B = 0.684191 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000588 
+Iteration = 4, D_ch = 1.259900, U_ch = 0.964989
+F02_ch = 0.075368, Cf_ch = 0.007803, Beta_ch = 15.080558
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.867776
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.184059, ds/B = 0.693898 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 58 of 185 (t = 11.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.032570, ds/B = 0.685925 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000587 
+Iteration = 4, D_ch = 1.260839, U_ch = 0.964270
+F02_ch = 0.075200, Cf_ch = 0.007801, Beta_ch = 15.069326
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.867035
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.217145, ds/B = 0.695639 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 59 of 185 (t = 11.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.065657, ds/B = 0.687666 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000585 
+Iteration = 4, D_ch = 1.261781, U_ch = 0.963550
+F02_ch = 0.075032, Cf_ch = 0.007798, Beta_ch = 15.058082
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.866292
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.250358, ds/B = 0.697387 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 60 of 185 (t = 12.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.098892, ds/B = 0.689415 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000584 
+Iteration = 4, D_ch = 1.262725, U_ch = 0.962830
+F02_ch = 0.074863, Cf_ch = 0.007796, Beta_ch = 15.046825
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.865550
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.283699, ds/B = 0.699142 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 61 of 185 (t = 12.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.132274, ds/B = 0.691172 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000582 
+Iteration = 4, D_ch = 1.263671, U_ch = 0.962109
+F02_ch = 0.074695, Cf_ch = 0.007793, Beta_ch = 15.035557
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.864806
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.317166, ds/B = 0.700903 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 62 of 185 (t = 12.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.165802, ds/B = 0.692937 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000581 
+Iteration = 4, D_ch = 1.264620, U_ch = 0.961387
+F02_ch = 0.074527, Cf_ch = 0.007790, Beta_ch = 15.024278
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.864062
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.350759, ds/B = 0.702672 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 63 of 185 (t = 12.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.199474, ds/B = 0.694709 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000579 
+Iteration = 4, D_ch = 1.265571, U_ch = 0.960665
+F02_ch = 0.074360, Cf_ch = 0.007788, Beta_ch = 15.012988
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.863317
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.384479, ds/B = 0.704446 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 64 of 185 (t = 12.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.233290, ds/B = 0.696489 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000578 
+Iteration = 4, D_ch = 1.266524, U_ch = 0.959942
+F02_ch = 0.074192, Cf_ch = 0.007785, Beta_ch = 15.001688
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.862572
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.418326, ds/B = 0.706228 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 65 of 185 (t = 13.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.267249, ds/B = 0.698276 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000576 
+Iteration = 4, D_ch = 1.267480, U_ch = 0.959218
+F02_ch = 0.074024, Cf_ch = 0.007783, Beta_ch = 14.990379
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.861826
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.452298, ds/B = 0.708016 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 66 of 185 (t = 13.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.301348, ds/B = 0.700071 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000575 
+Iteration = 4, D_ch = 1.268437, U_ch = 0.958494
+F02_ch = 0.073857, Cf_ch = 0.007780, Beta_ch = 14.979060
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.861080
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.486396, ds/B = 0.709810 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 67 of 185 (t = 13.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.335588, ds/B = 0.701873 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000573 
+Iteration = 4, D_ch = 1.269397, U_ch = 0.957769
+F02_ch = 0.073689, Cf_ch = 0.007777, Beta_ch = 14.967734
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.860333
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.520620, ds/B = 0.711612 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 68 of 185 (t = 13.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.369967, ds/B = 0.703682 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000572 
+Iteration = 4, D_ch = 1.270359, U_ch = 0.957044
+F02_ch = 0.073522, Cf_ch = 0.007775, Beta_ch = 14.956399
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.859586
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.554970, ds/B = 0.713419 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 69 of 185 (t = 13.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.404484, ds/B = 0.705499 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000570 
+Iteration = 4, D_ch = 1.271323, U_ch = 0.956318
+F02_ch = 0.073355, Cf_ch = 0.007772, Beta_ch = 14.945056
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.858838
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.589444, ds/B = 0.715234 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 70 of 185 (t = 14.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.439137, ds/B = 0.707323 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000569 
+Iteration = 4, D_ch = 1.272290, U_ch = 0.955592
+F02_ch = 0.073188, Cf_ch = 0.007770, Beta_ch = 14.933707
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.858090
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.624043, ds/B = 0.717055 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 71 of 185 (t = 14.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.473927, ds/B = 0.709154 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000567 
+Iteration = 4, D_ch = 1.273258, U_ch = 0.954865
+F02_ch = 0.073021, Cf_ch = 0.007767, Beta_ch = 14.922351
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.857342
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.658766, ds/B = 0.718882 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 72 of 185 (t = 14.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.508850, ds/B = 0.710992 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000566 
+Iteration = 4, D_ch = 1.274228, U_ch = 0.954138
+F02_ch = 0.072854, Cf_ch = 0.007764, Beta_ch = 14.910989
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.856593
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.693614, ds/B = 0.720717 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 73 of 185 (t = 14.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.543907, ds/B = 0.712837 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000564 
+Iteration = 4, D_ch = 1.275200, U_ch = 0.953411
+F02_ch = 0.072688, Cf_ch = 0.007762, Beta_ch = 14.899622
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.855844
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.728585, ds/B = 0.722557 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 74 of 185 (t = 14.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.579096, ds/B = 0.714689 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000563 
+Iteration = 4, D_ch = 1.276174, U_ch = 0.952683
+F02_ch = 0.072521, Cf_ch = 0.007759, Beta_ch = 14.888250
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.855095
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.763680, ds/B = 0.724404 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 75 of 185 (t = 15.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.614416, ds/B = 0.716548 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000561 
+Iteration = 4, D_ch = 1.277150, U_ch = 0.951955
+F02_ch = 0.072355, Cf_ch = 0.007757, Beta_ch = 14.876873
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.854346
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.799067, ds/B = 0.726267 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 76 of 185 (t = 15.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.649866, ds/B = 0.718414 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000560 
+Iteration = 4, D_ch = 1.278128, U_ch = 0.951227
+F02_ch = 0.072189, Cf_ch = 0.007754, Beta_ch = 14.865491
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.853596
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.834646, ds/B = 0.728139 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 77 of 185 (t = 15.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.685445, ds/B = 0.720287 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000558 
+Iteration = 4, D_ch = 1.279108, U_ch = 0.950498
+F02_ch = 0.072024, Cf_ch = 0.007751, Beta_ch = 14.854107
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.852847
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.870341, ds/B = 0.730018 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 78 of 185 (t = 15.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.721151, ds/B = 0.722166 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000557 
+Iteration = 4, D_ch = 1.280089, U_ch = 0.949770
+F02_ch = 0.071858, Cf_ch = 0.007749, Beta_ch = 14.842719
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.852097
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.906151, ds/B = 0.731903 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 79 of 185 (t = 15.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.756984, ds/B = 0.724052 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000555 
+Iteration = 4, D_ch = 1.281072, U_ch = 0.949041
+F02_ch = 0.071693, Cf_ch = 0.007746, Beta_ch = 14.831328
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.851347
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.942075, ds/B = 0.733793 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 80 of 185 (t = 16.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.792942, ds/B = 0.725944 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000554 
+Iteration = 4, D_ch = 1.282057, U_ch = 0.948312
+F02_ch = 0.071528, Cf_ch = 0.007744, Beta_ch = 14.819935
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.850597
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 13.978113, ds/B = 0.735690 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 81 of 185 (t = 16.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.829024, ds/B = 0.727843 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000552 
+Iteration = 4, D_ch = 1.283043, U_ch = 0.947582
+F02_ch = 0.071363, Cf_ch = 0.007741, Beta_ch = 14.808540
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.849847
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.014265, ds/B = 0.737593 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 82 of 185 (t = 16.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.865229, ds/B = 0.729749 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000551 
+Iteration = 4, D_ch = 1.284032, U_ch = 0.946853
+F02_ch = 0.071198, Cf_ch = 0.007738, Beta_ch = 14.797144
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.849098
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.050530, ds/B = 0.739502 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 83 of 185 (t = 16.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.901557, ds/B = 0.731661 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000549 
+Iteration = 4, D_ch = 1.285021, U_ch = 0.946124
+F02_ch = 0.071034, Cf_ch = 0.007736, Beta_ch = 14.785747
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.848348
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.086906, ds/B = 0.741416 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 84 of 185 (t = 16.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.938004, ds/B = 0.733579 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000548 
+Iteration = 4, D_ch = 1.286013, U_ch = 0.945395
+F02_ch = 0.070870, Cf_ch = 0.007733, Beta_ch = 14.774350
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.847598
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.123394, ds/B = 0.743337 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 85 of 185 (t = 17.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 13.974572, ds/B = 0.735504 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000547 
+Iteration = 4, D_ch = 1.287005, U_ch = 0.944665
+F02_ch = 0.070706, Cf_ch = 0.007730, Beta_ch = 14.762952
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.846848
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.159993, ds/B = 0.745263 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 86 of 185 (t = 17.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.011257, ds/B = 0.737435 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000545 
+Iteration = 4, D_ch = 1.288000, U_ch = 0.943936
+F02_ch = 0.070542, Cf_ch = 0.007728, Beta_ch = 14.751555
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.846099
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.196702, ds/B = 0.747195 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 87 of 185 (t = 17.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.048060, ds/B = 0.739372 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000544 
+Iteration = 4, D_ch = 1.288996, U_ch = 0.943207
+F02_ch = 0.070379, Cf_ch = 0.007725, Beta_ch = 14.740159
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.845349
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.233520, ds/B = 0.749133 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 88 of 185 (t = 17.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.084979, ds/B = 0.741315 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000542 
+Iteration = 4, D_ch = 1.289993, U_ch = 0.942478
+F02_ch = 0.070216, Cf_ch = 0.007723, Beta_ch = 14.728764
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.844600
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.270447, ds/B = 0.751076 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 89 of 185 (t = 17.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.122013, ds/B = 0.743264 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000541 
+Iteration = 4, D_ch = 1.290991, U_ch = 0.941749
+F02_ch = 0.070053, Cf_ch = 0.007720, Beta_ch = 14.717371
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.843851
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.307482, ds/B = 0.753025 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 90 of 185 (t = 18.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.159161, ds/B = 0.745219 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000539 
+Iteration = 4, D_ch = 1.291991, U_ch = 0.941020
+F02_ch = 0.069890, Cf_ch = 0.007717, Beta_ch = 14.705980
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.843103
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.344624, ds/B = 0.754980 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 91 of 185 (t = 18.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.196422, ds/B = 0.747180 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000538 
+Iteration = 4, D_ch = 1.292993, U_ch = 0.940291
+F02_ch = 0.069728, Cf_ch = 0.007715, Beta_ch = 14.694592
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.842354
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.381872, ds/B = 0.756941 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 92 of 185 (t = 18.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.233794, ds/B = 0.749147 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000536 
+Iteration = 4, D_ch = 1.293995, U_ch = 0.939563
+F02_ch = 0.069566, Cf_ch = 0.007712, Beta_ch = 14.683206
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.841606
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.419226, ds/B = 0.758907 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 93 of 185 (t = 18.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.271276, ds/B = 0.751120 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000535 
+Iteration = 4, D_ch = 1.294999, U_ch = 0.938834
+F02_ch = 0.069405, Cf_ch = 0.007709, Beta_ch = 14.671825
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.840858
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.456685, ds/B = 0.760878 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 94 of 185 (t = 18.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.308868, ds/B = 0.753098 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000534 
+Iteration = 4, D_ch = 1.296004, U_ch = 0.938106
+F02_ch = 0.069243, Cf_ch = 0.007707, Beta_ch = 14.660447
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.840111
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.494248, ds/B = 0.762855 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 95 of 185 (t = 19.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.346568, ds/B = 0.755083 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000532 
+Iteration = 4, D_ch = 1.297010, U_ch = 0.937378
+F02_ch = 0.069082, Cf_ch = 0.007704, Beta_ch = 14.649073
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.839364
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.531914, ds/B = 0.764838 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 96 of 185 (t = 19.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.384375, ds/B = 0.757072 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000531 
+Iteration = 4, D_ch = 1.298018, U_ch = 0.936651
+F02_ch = 0.068921, Cf_ch = 0.007702, Beta_ch = 14.637704
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.838617
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.569682, ds/B = 0.766825 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 97 of 185 (t = 19.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.422287, ds/B = 0.759068 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000529 
+Iteration = 4, D_ch = 1.299026, U_ch = 0.935924
+F02_ch = 0.068761, Cf_ch = 0.007699, Beta_ch = 14.626340
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.837871
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.607552, ds/B = 0.768819 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 98 of 185 (t = 19.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.460305, ds/B = 0.761069 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000528 
+Iteration = 4, D_ch = 1.300036, U_ch = 0.935197
+F02_ch = 0.068601, Cf_ch = 0.007696, Beta_ch = 14.614982
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.837125
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.645522, ds/B = 0.770817 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 99 of 185 (t = 19.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.498425, ds/B = 0.763075 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000527 
+Iteration = 4, D_ch = 1.301046, U_ch = 0.934470
+F02_ch = 0.068441, Cf_ch = 0.007694, Beta_ch = 14.603630
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.836380
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.683592, ds/B = 0.772821 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 100 of 185 (t = 20.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.536649, ds/B = 0.765087 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000525 
+Iteration = 4, D_ch = 1.302058, U_ch = 0.933744
+F02_ch = 0.068282, Cf_ch = 0.007691, Beta_ch = 14.592283
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.835635
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.721761, ds/B = 0.774830 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 101 of 185 (t = 20.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.574973, ds/B = 0.767104 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000524 
+Iteration = 4, D_ch = 1.303071, U_ch = 0.933019
+F02_ch = 0.068123, Cf_ch = 0.007688, Beta_ch = 14.580944
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.834891
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.760027, ds/B = 0.776844 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 102 of 185 (t = 20.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.613398, ds/B = 0.769126 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000522 
+Iteration = 4, D_ch = 1.304084, U_ch = 0.932294
+F02_ch = 0.067964, Cf_ch = 0.007686, Beta_ch = 14.569612
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.834147
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.798391, ds/B = 0.778863 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 103 of 185 (t = 20.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.651922, ds/B = 0.771154 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000521 
+Iteration = 4, D_ch = 1.305099, U_ch = 0.931569
+F02_ch = 0.067806, Cf_ch = 0.007683, Beta_ch = 14.558287
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.833404
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.836851, ds/B = 0.780887 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 104 of 185 (t = 20.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.690544, ds/B = 0.773187 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000520 
+Iteration = 4, D_ch = 1.306114, U_ch = 0.930845
+F02_ch = 0.067648, Cf_ch = 0.007681, Beta_ch = 14.546970
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.832662
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.875406, ds/B = 0.782916 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 105 of 185 (t = 21.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.729263, ds/B = 0.775224 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000518 
+Iteration = 4, D_ch = 1.307130, U_ch = 0.930121
+F02_ch = 0.067490, Cf_ch = 0.007678, Beta_ch = 14.535661
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.831920
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.914054, ds/B = 0.784950 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 106 of 185 (t = 21.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.768077, ds/B = 0.777267 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000517 
+Iteration = 4, D_ch = 1.308147, U_ch = 0.929398
+F02_ch = 0.067333, Cf_ch = 0.007675, Beta_ch = 14.524361
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.831179
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.952797, ds/B = 0.786989 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 107 of 185 (t = 21.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.806986, ds/B = 0.779315 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000515 
+Iteration = 4, D_ch = 1.309165, U_ch = 0.928676
+F02_ch = 0.067176, Cf_ch = 0.007673, Beta_ch = 14.513070
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.830438
+Splines, No Filter on Centerline 
+	Max ds (m)= 14.991631, ds/B = 0.789033 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 108 of 185 (t = 21.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.845989, ds/B = 0.781368 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000514 
+Iteration = 4, D_ch = 1.310183, U_ch = 0.927954
+F02_ch = 0.067019, Cf_ch = 0.007670, Beta_ch = 14.501788
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.829698
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.030557, ds/B = 0.791082 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 109 of 185 (t = 21.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.885084, ds/B = 0.783425 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000513 
+Iteration = 4, D_ch = 1.311202, U_ch = 0.927232
+F02_ch = 0.066863, Cf_ch = 0.007668, Beta_ch = 14.490516
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.828959
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.069573, ds/B = 0.793135 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 110 of 185 (t = 22.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.924271, ds/B = 0.785488 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000511 
+Iteration = 4, D_ch = 1.312222, U_ch = 0.926512
+F02_ch = 0.066707, Cf_ch = 0.007665, Beta_ch = 14.479254
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.828221
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.108678, ds/B = 0.795194 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 111 of 185 (t = 22.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 14.963547, ds/B = 0.787555 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000510 
+Iteration = 4, D_ch = 1.313243, U_ch = 0.925792
+F02_ch = 0.066552, Cf_ch = 0.007662, Beta_ch = 14.468002
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.827484
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.147872, ds/B = 0.797256 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 112 of 185 (t = 22.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.002913, ds/B = 0.789627 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000509 
+Iteration = 4, D_ch = 1.314264, U_ch = 0.925073
+F02_ch = 0.066397, Cf_ch = 0.007660, Beta_ch = 14.456761
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.826747
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.187154, ds/B = 0.799324 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 113 of 185 (t = 22.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.042367, ds/B = 0.791704 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000507 
+Iteration = 4, D_ch = 1.315286, U_ch = 0.924354
+F02_ch = 0.066242, Cf_ch = 0.007657, Beta_ch = 14.445531
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.826011
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.226521, ds/B = 0.801396 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 114 of 185 (t = 22.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.081908, ds/B = 0.793785 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000506 
+Iteration = 4, D_ch = 1.316308, U_ch = 0.923636
+F02_ch = 0.066088, Cf_ch = 0.007655, Beta_ch = 14.434313
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.825276
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.265974, ds/B = 0.803472 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 115 of 185 (t = 23.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.121535, ds/B = 0.795870 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000505 
+Iteration = 4, D_ch = 1.317331, U_ch = 0.922919
+F02_ch = 0.065934, Cf_ch = 0.007652, Beta_ch = 14.423106
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.824542
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.305512, ds/B = 0.805553 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 116 of 185 (t = 23.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.161247, ds/B = 0.797960 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000503 
+Iteration = 4, D_ch = 1.318354, U_ch = 0.922203
+F02_ch = 0.065781, Cf_ch = 0.007649, Beta_ch = 14.411911
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.823809
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.345133, ds/B = 0.807639 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 117 of 185 (t = 23.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.201042, ds/B = 0.800055 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000502 
+Iteration = 4, D_ch = 1.319378, U_ch = 0.921487
+F02_ch = 0.065628, Cf_ch = 0.007647, Beta_ch = 14.400729
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.823077
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.384836, ds/B = 0.809728 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 118 of 185 (t = 23.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.240920, ds/B = 0.802154 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000501 
+Iteration = 4, D_ch = 1.320402, U_ch = 0.920772
+F02_ch = 0.065475, Cf_ch = 0.007644, Beta_ch = 14.389559
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.822345
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.424621, ds/B = 0.811822 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 119 of 185 (t = 23.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.280880, ds/B = 0.804257 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000499 
+Iteration = 4, D_ch = 1.321426, U_ch = 0.920058
+F02_ch = 0.065323, Cf_ch = 0.007642, Beta_ch = 14.378403
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.821615
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.464486, ds/B = 0.813920 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 120 of 185 (t = 24.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.320921, ds/B = 0.806364 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000498 
+Iteration = 4, D_ch = 1.322451, U_ch = 0.919345
+F02_ch = 0.065171, Cf_ch = 0.007639, Beta_ch = 14.367259
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.820885
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.504431, ds/B = 0.816023 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 121 of 185 (t = 24.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.361041, ds/B = 0.808476 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000497 
+Iteration = 4, D_ch = 1.323477, U_ch = 0.918633
+F02_ch = 0.065020, Cf_ch = 0.007636, Beta_ch = 14.356129
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.820157
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.544454, ds/B = 0.818129 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 122 of 185 (t = 24.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.401240, ds/B = 0.810592 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000495 
+Iteration = 4, D_ch = 1.324502, U_ch = 0.917922
+F02_ch = 0.064869, Cf_ch = 0.007634, Beta_ch = 14.345014
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.819429
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.584554, ds/B = 0.820240 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 123 of 185 (t = 24.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.441517, ds/B = 0.812711 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000494 
+Iteration = 4, D_ch = 1.325528, U_ch = 0.917212
+F02_ch = 0.064719, Cf_ch = 0.007631, Beta_ch = 14.333912
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.818703
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.624731, ds/B = 0.822354 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 124 of 185 (t = 24.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.481870, ds/B = 0.814835 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000493 
+Iteration = 4, D_ch = 1.326554, U_ch = 0.916502
+F02_ch = 0.064569, Cf_ch = 0.007629, Beta_ch = 14.322825
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.817977
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.664984, ds/B = 0.824473 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 125 of 185 (t = 25.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.522298, ds/B = 0.816963 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000491 
+Iteration = 4, D_ch = 1.327580, U_ch = 0.915794
+F02_ch = 0.064419, Cf_ch = 0.007626, Beta_ch = 14.311752
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.817253
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.705311, ds/B = 0.826595 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 126 of 185 (t = 25.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.562801, ds/B = 0.819095 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000490 
+Iteration = 4, D_ch = 1.328607, U_ch = 0.915086
+F02_ch = 0.064270, Cf_ch = 0.007623, Beta_ch = 14.300695
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.816530
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.745711, ds/B = 0.828722 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 127 of 185 (t = 25.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.603378, ds/B = 0.821230 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000489 
+Iteration = 4, D_ch = 1.329633, U_ch = 0.914379
+F02_ch = 0.064121, Cf_ch = 0.007621, Beta_ch = 14.289652
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.815808
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.786183, ds/B = 0.830852 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 128 of 185 (t = 25.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.644026, ds/B = 0.823370 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000487 
+Iteration = 4, D_ch = 1.330660, U_ch = 0.913674
+F02_ch = 0.063973, Cf_ch = 0.007618, Beta_ch = 14.278626
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.815086
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.826728, ds/B = 0.832986 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 129 of 185 (t = 25.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.684747, ds/B = 0.825513 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000486 
+Iteration = 4, D_ch = 1.331687, U_ch = 0.912969
+F02_ch = 0.063825, Cf_ch = 0.007616, Beta_ch = 14.267615
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.814367
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.867342, ds/B = 0.835123 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 130 of 185 (t = 26.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.725538, ds/B = 0.827660 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000485 
+Iteration = 4, D_ch = 1.332714, U_ch = 0.912266
+F02_ch = 0.063677, Cf_ch = 0.007613, Beta_ch = 14.256620
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.813648
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.908026, ds/B = 0.837265 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 131 of 185 (t = 26.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.766399, ds/B = 0.829810 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000484 
+Iteration = 4, D_ch = 1.333741, U_ch = 0.911563
+F02_ch = 0.063530, Cf_ch = 0.007611, Beta_ch = 14.245641
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.812930
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.948779, ds/B = 0.839409 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 132 of 185 (t = 26.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.807328, ds/B = 0.831965 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000482 
+Iteration = 4, D_ch = 1.334768, U_ch = 0.910862
+F02_ch = 0.063384, Cf_ch = 0.007608, Beta_ch = 14.234679
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.812214
+Splines, No Filter on Centerline 
+	Max ds (m)= 15.989599, ds/B = 0.841558 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 133 of 185 (t = 26.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.848325, ds/B = 0.834122 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000481 
+Iteration = 4, D_ch = 1.335795, U_ch = 0.910161
+F02_ch = 0.063238, Cf_ch = 0.007606, Beta_ch = 14.223734
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.811498
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.030486, ds/B = 0.843710 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 134 of 185 (t = 26.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.889388, ds/B = 0.836284 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000480 
+Iteration = 4, D_ch = 1.336823, U_ch = 0.909462
+F02_ch = 0.063092, Cf_ch = 0.007603, Beta_ch = 14.212806
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.810784
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.071438, ds/B = 0.845865 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 135 of 185 (t = 27.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.930517, ds/B = 0.838448 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000478 
+Iteration = 4, D_ch = 1.337850, U_ch = 0.908764
+F02_ch = 0.062947, Cf_ch = 0.007600, Beta_ch = 14.201895
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.810072
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.112455, ds/B = 0.848024 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 136 of 185 (t = 27.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 15.971711, ds/B = 0.840616 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000477 
+Iteration = 4, D_ch = 1.338877, U_ch = 0.908067
+F02_ch = 0.062802, Cf_ch = 0.007598, Beta_ch = 14.191002
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.809360
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.153535, ds/B = 0.850186 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 137 of 185 (t = 27.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.012969, ds/B = 0.842788 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000476 
+Iteration = 4, D_ch = 1.339903, U_ch = 0.907371
+F02_ch = 0.062658, Cf_ch = 0.007595, Beta_ch = 14.180126
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.808650
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.194679, ds/B = 0.852352 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 138 of 185 (t = 27.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.054289, ds/B = 0.844963 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000475 
+Iteration = 4, D_ch = 1.340930, U_ch = 0.906676
+F02_ch = 0.062514, Cf_ch = 0.007593, Beta_ch = 14.169268
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.807940
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.235883, ds/B = 0.854520 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 139 of 185 (t = 27.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.095672, ds/B = 0.847141 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000473 
+Iteration = 4, D_ch = 1.341957, U_ch = 0.905983
+F02_ch = 0.062371, Cf_ch = 0.007590, Beta_ch = 14.158428
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.807233
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.277149, ds/B = 0.856692 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 140 of 185 (t = 28.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.137116, ds/B = 0.849322 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000472 
+Iteration = 4, D_ch = 1.342983, U_ch = 0.905290
+F02_ch = 0.062228, Cf_ch = 0.007588, Beta_ch = 14.147606
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.806526
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.318475, ds/B = 0.858867 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 141 of 185 (t = 28.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.178619, ds/B = 0.851506 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000471 
+Iteration = 4, D_ch = 1.344010, U_ch = 0.904599
+F02_ch = 0.062085, Cf_ch = 0.007585, Beta_ch = 14.136803
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.805821
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.359859, ds/B = 0.861045 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 142 of 185 (t = 28.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.220182, ds/B = 0.853694 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000470 
+Iteration = 4, D_ch = 1.345036, U_ch = 0.903909
+F02_ch = 0.061943, Cf_ch = 0.007583, Beta_ch = 14.126019
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.805117
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.401302, ds/B = 0.863226 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 143 of 185 (t = 28.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.261804, ds/B = 0.855884 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000468 
+Iteration = 4, D_ch = 1.346062, U_ch = 0.903220
+F02_ch = 0.061802, Cf_ch = 0.007580, Beta_ch = 14.115254
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.804414
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.442802, ds/B = 0.865411 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 144 of 185 (t = 28.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.303482, ds/B = 0.858078 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000467 
+Iteration = 4, D_ch = 1.347087, U_ch = 0.902532
+F02_ch = 0.061661, Cf_ch = 0.007578, Beta_ch = 14.104507
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.803713
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.484357, ds/B = 0.867598 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 145 of 185 (t = 29.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.345218, ds/B = 0.860275 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000466 
+Iteration = 4, D_ch = 1.348112, U_ch = 0.901846
+F02_ch = 0.061520, Cf_ch = 0.007575, Beta_ch = 14.093780
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.803013
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.525968, ds/B = 0.869788 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 146 of 185 (t = 29.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.387009, ds/B = 0.862474 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000465 
+Iteration = 4, D_ch = 1.349137, U_ch = 0.901161
+F02_ch = 0.061380, Cf_ch = 0.007573, Beta_ch = 14.083072
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.802315
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.567634, ds/B = 0.871981 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 147 of 185 (t = 29.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.428855, ds/B = 0.864677 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000464 
+Iteration = 4, D_ch = 1.350162, U_ch = 0.900477
+F02_ch = 0.061240, Cf_ch = 0.007570, Beta_ch = 14.072384
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.801618
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.609353, ds/B = 0.874176 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 148 of 185 (t = 29.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.470755, ds/B = 0.866882 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000462 
+Iteration = 4, D_ch = 1.351186, U_ch = 0.899794
+F02_ch = 0.061101, Cf_ch = 0.007568, Beta_ch = 14.061716
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.800922
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.651124, ds/B = 0.876375 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 149 of 185 (t = 29.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.512708, ds/B = 0.869090 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000461 
+Iteration = 4, D_ch = 1.352210, U_ch = 0.899113
+F02_ch = 0.060963, Cf_ch = 0.007565, Beta_ch = 14.051067
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.800227
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.692948, ds/B = 0.878576 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 150 of 185 (t = 30.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.554713, ds/B = 0.871301 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000460 
+Iteration = 4, D_ch = 1.353234, U_ch = 0.898432
+F02_ch = 0.060824, Cf_ch = 0.007563, Beta_ch = 14.040439
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.799534
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.734822, ds/B = 0.880780 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 151 of 185 (t = 30.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.596770, ds/B = 0.873514 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000459 
+Iteration = 4, D_ch = 1.354257, U_ch = 0.897754
+F02_ch = 0.060687, Cf_ch = 0.007560, Beta_ch = 14.029830
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.798843
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.776746, ds/B = 0.882987 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 152 of 185 (t = 30.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.638877, ds/B = 0.875730 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000458 
+Iteration = 4, D_ch = 1.355280, U_ch = 0.897076
+F02_ch = 0.060549, Cf_ch = 0.007558, Beta_ch = 14.019243
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.798153
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.818719, ds/B = 0.885196 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 153 of 185 (t = 30.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.681034, ds/B = 0.877949 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000456 
+Iteration = 4, D_ch = 1.356302, U_ch = 0.896400
+F02_ch = 0.060412, Cf_ch = 0.007555, Beta_ch = 14.008675
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.797464
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.860740, ds/B = 0.887407 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 154 of 185 (t = 30.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.723240, ds/B = 0.880171 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000455 
+Iteration = 4, D_ch = 1.357324, U_ch = 0.895725
+F02_ch = 0.060276, Cf_ch = 0.007553, Beta_ch = 13.998128
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.796776
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.902809, ds/B = 0.889622 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 155 of 185 (t = 31.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.765494, ds/B = 0.882394 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000454 
+Iteration = 4, D_ch = 1.358346, U_ch = 0.895052
+F02_ch = 0.060140, Cf_ch = 0.007550, Beta_ch = 13.987603
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.796091
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.944924, ds/B = 0.891838 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 156 of 185 (t = 31.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.807796, ds/B = 0.884621 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000453 
+Iteration = 4, D_ch = 1.359367, U_ch = 0.894379
+F02_ch = 0.060005, Cf_ch = 0.007548, Beta_ch = 13.977097
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.795406
+Splines, No Filter on Centerline 
+	Max ds (m)= 16.987085, ds/B = 0.894057 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 157 of 185 (t = 31.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.850144, ds/B = 0.886850 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000452 
+Iteration = 4, D_ch = 1.360387, U_ch = 0.893709
+F02_ch = 0.059870, Cf_ch = 0.007545, Beta_ch = 13.966614
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.794723
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.029291, ds/B = 0.896278 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 158 of 185 (t = 31.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.892538, ds/B = 0.889081 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000451 
+Iteration = 4, D_ch = 1.361407, U_ch = 0.893039
+F02_ch = 0.059735, Cf_ch = 0.007543, Beta_ch = 13.956151
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.794042
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.071541, ds/B = 0.898502 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 159 of 185 (t = 31.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.934977, ds/B = 0.891315 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000449 
+Iteration = 4, D_ch = 1.362426, U_ch = 0.892371
+F02_ch = 0.059601, Cf_ch = 0.007540, Beta_ch = 13.945709
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.793362
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.113835, ds/B = 0.900728 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 160 of 185 (t = 32.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 16.977460, ds/B = 0.893551 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000448 
+Iteration = 4, D_ch = 1.363445, U_ch = 0.891704
+F02_ch = 0.059468, Cf_ch = 0.007538, Beta_ch = 13.935289
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.792683
+TecPlot2D 
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.156171, ds/B = 0.902956 
+	Number of nodes in the streamwise direction = 350 
+TecPlot1D 
+*****************************************************************************
+Iteration 161 of 185 (t = 32.200000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 17.019987, ds/B = 0.895789 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000447 
+Iteration = 4, D_ch = 1.364463, U_ch = 0.891039
+F02_ch = 0.059335, Cf_ch = 0.007536, Beta_ch = 13.924890
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.792006
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.198548, ds/B = 0.905187 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 162 of 185 (t = 32.400000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 17.062557, ds/B = 0.898029 
+	Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000446 
+Iteration = 4, D_ch = 1.365481, U_ch = 0.890375
+F02_ch = 0.059202, Cf_ch = 0.007533, Beta_ch = 13.914513
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.791331
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.240967, ds/B = 0.907419 
+	Number of nodes in the streamwise direction = 350 
+*****************************************************************************
+Iteration 163 of 185 (t = 32.600000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 17.105168, ds/B = 0.900272 
+	Number of nodes in the streamwise direction = 350 
+Regridding
+	Updated Max ds (m)= 17.154270, ds/B = 0.902856 
+	Updated Number of nodes in the streamwise direction = 349 
+Filter on Curvature
+CHANNEL SLOPE = 0.000445 
+Iteration = 4, D_ch = 1.366496, U_ch = 0.889713
+F02_ch = 0.059071, Cf_ch = 0.007531, Beta_ch = 13.904176
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.790658
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.332678, ds/B = 0.912246 
+	Number of nodes in the streamwise direction = 349 
+*****************************************************************************
+Iteration 164 of 185 (t = 32.800000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 17.197041, ds/B = 0.905107 
+	Number of nodes in the streamwise direction = 349 
+Regridding
+	Updated Max ds (m)= 17.197041, ds/B = 0.905107 
+	Updated Number of nodes in the streamwise direction = 349 
+Filter on Curvature
+CHANNEL SLOPE = 0.000444 
+Iteration = 4, D_ch = 1.367512, U_ch = 0.889052
+F02_ch = 0.058939, Cf_ch = 0.007528, Beta_ch = 13.893843
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.789985
+Splines, No Filter on Centerline 
+	Max ds (m)= 17.375288, ds/B = 0.914489 
+	Number of nodes in the streamwise direction = 349 
+*****************************************************************************
+Iteration 165 of 185 (t = 33.000000 of 37.000000 years) 
+*****************************************************************************
+	Max ds (m)= 17.239857, ds/B = 0.907361 
+	Number of nodes in the streamwise direction = 349 
+Regridding
+	Updated Max ds (m)= 17.190502, ds/B = 0.904763 
+	Updated Number of nodes in the streamwise direction = 350 
+Filter on Curvature
+CHANNEL SLOPE = 0.000443 
+Iteration = 4, D_ch = 1.368529, U_ch = 0.888392
+F02_ch = 0.058808, Cf_ch = 0.007526, Beta_ch = 13.883523
+ D0 = 1.113566, U0 = 1.091798
+ F02 = 0.109156, Cf0 = 0.008247, Beta = 17.062304, xi = 0.789314
