@@ -10,6 +10,6 @@ Download DotSpatial-1.8 (newer versions may or may not work) and put the binarie
 contrib/DotSpatial-1.8.
 
 Download GSL 1.10 source (newer version may or may not work) and put the source in
-contrib/gsl-1.10.  Build the source code 
+contrib/gsl-1.10.  Build cblaslib and gsllib in Release Win32 and x64 builds.
 http://git.savannah.gnu.org/cgit/gsl.git/snapshot/release-1-10.tar.gz
 

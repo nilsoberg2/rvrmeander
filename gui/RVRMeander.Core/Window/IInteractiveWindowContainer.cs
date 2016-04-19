@@ -17,5 +17,7 @@ namespace RVRMeander.Core.Window
     void SetProgress(int percentage);
 
     void ResetProgress();
+
+    void UpdateToolItem(IToolbarItem item);
   }
 }

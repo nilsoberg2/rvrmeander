@@ -125,6 +125,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationConfig.cs" />
     <Compile Include="EventManager.cs" />
     <Compile Include="Gis\AddDataset.cs" />
     <Compile Include="Gis\BasemapLayers.cs" />
@@ -181,6 +182,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Project\Const.cs" />
+    <Compile Include="IApplicationConfig.cs" />
     <Compile Include="Project\NewProject.cs" />
     <Compile Include="Project\NewProjectForm.cs">
       <SubType>Form</SubType>
@@ -208,6 +210,7 @@
     <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\AppData.cs" />
     <Compile Include="ViewLog.cs" />
     <EmbeddedResource Include="Gis\Icons.resx">
       <Generator>ResXFileCodeGenerator</Generator>

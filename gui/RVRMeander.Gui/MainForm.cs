@@ -638,5 +638,42 @@ namespace RVRMeander.Gui
         this.toolToUiMap[theEvent.Item].Checked = theEvent.Checked;
       }
     }
+
+    public void UpdateToolItem(IToolbarItem tool)
+    {
+      IMenuToolbarItem menuTool = tool as IMenuToolbarItem;
+
+      if (menuTool == null)
+      {
+        return;
+      }
+
+      RibbonPanel group = GetRibbonPanel(menuTool);
+
+      foreach (RibbonItem gItem in group.Items)
+      {
+        RibbonButton btn = gItem as RibbonButton;
+        if (btn != null)
+        {
+          if (menuTool.Caption == btn.Text)
+          {
+            btn.DropDownItems.Clear();
+            foreach (var menuItem in menuTool.MenuItems)
+            {
+              RibbonItem item = new RibbonButton(menuItem);
+              btn.DropDownItems.Add(item);
+            }
+            if (btn.DropDownItems.Count > 0)
+            {
+              btn.Style = RibbonButtonStyle.SplitDropDown;
+            }
+            else
+            {
+              btn.Style = RibbonButtonStyle.Normal;
+            }
+          }
+        }
+      }
+    }
   }
 }

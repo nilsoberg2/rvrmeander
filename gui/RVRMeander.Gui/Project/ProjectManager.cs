@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RVRMeander.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
@@ -39,10 +40,10 @@ namespace RVRMeander.Gui.Project
       {
         return;
       }
-      Utils.IniFile config = null;
+      IniFile config = null;
       try
       {
-        config = new Utils.IniFile(ConfigFilePath);
+        config = new IniFile(ConfigFilePath);
         config.SetValue(Const.Config_Section_Main, propertyName, value);
       }
       catch (Exception ex)
@@ -63,10 +64,10 @@ namespace RVRMeander.Gui.Project
       {
         return;
       }
-      Utils.IniFile config = null;
+      IniFile config = null;
       try
       {
-        config = new Utils.IniFile(ConfigFilePath);
+        config = new IniFile(ConfigFilePath);
         config.SetValue(groupName, propertyName, value);
       }
       catch (Exception ex)
@@ -97,7 +98,7 @@ namespace RVRMeander.Gui.Project
       try
       {
         sr = new StreamReader(ConfigFilePath);
-        Utils.IniFile config = new Utils.IniFile(sr);
+        IniFile config = new IniFile(sr);
         return config.GetValue(groupName, propertyName, "");
       }
       catch (Exception ex)
@@ -123,7 +124,7 @@ namespace RVRMeander.Gui.Project
       try
       {
         sr = new StreamReader(ConfigFilePath);
-        Utils.IniFile config = new Utils.IniFile(sr);
+        IniFile config = new IniFile(sr);
         return config.GetEntryNames(groupName);
       }
       catch (Exception ex)
@@ -171,7 +172,7 @@ namespace RVRMeander.Gui.Project
       try
       {
         sr = new StreamReader(ConfigFilePath);
-        Utils.IniFile config = new Utils.IniFile(sr);
+        IniFile config = new IniFile(sr);
         config.SetValue(Const.Config_Section_Main, "CreationDate", DateTime.Now.ToString("o"));
         return true;
       }
