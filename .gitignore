@@ -3,7 +3,8 @@
 
 contrib/DotSpatial-1.8
 contrib/gsl-1.10
-
+libconfig++.[Dd]ebug/
+libconfig++.[Rr]elease/
 
 # User-specific files
 *.suo
