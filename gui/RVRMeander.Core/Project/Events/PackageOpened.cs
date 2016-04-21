@@ -9,5 +9,7 @@ namespace RVRMeander.Core.Project.Events
   public class PackageOpened
   {
     public string PackagePath { get; set; }
+
+    public string Projection { get; set; }
   }
 }

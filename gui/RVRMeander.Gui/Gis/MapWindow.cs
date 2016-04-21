@@ -1,5 +1,6 @@
 ﻿using DotSpatial.Controls;
 using DotSpatial.Data;
+using DotSpatial.Symbology;
 using DotSpatial.Topology;
 using RVRMeander.Core;
 using RVRMeander.Core.Project;
@@ -26,7 +27,9 @@ namespace RVRMeander.Gui.Gis
   [System.ComponentModel.Composition.Export(typeof(IMapWindow))]
   [System.ComponentModel.Composition.Export(typeof(MapWindow))]
   public partial class MapWindow : DockableWindow, IMapWindow, Core.Window.IToolbarItem, Core.Window.IToolbarItemArray, WebMap.IBasemapWindow,
-    Core.Events.IListener<Core.Project.Events.PackageOpened>
+    Core.Events.IListener<Core.Project.Events.PackageOpened>,
+    Core.Events.IListener<Core.Result.Events.ResultSetSelected>,
+    Core.Events.IListener<Core.Result.Events.ResultLayerSelected>
   {
     private const string Section_Layers = "LAYERS";
 
@@ -48,6 +51,10 @@ namespace RVRMeander.Gui.Gis
     public event MapMouseMove MapMouseMove = delegate { };
     private Core.Events.IEventManager eventMgr;
     private IProjectManager projectMgr;
+    private MapGroup resultsGroup;
+    private Core.Result.IResultSet curResultsSet;
+    private MapLineLayer resultsLayer;
+    private List<Color> colorList;
 
     [System.ComponentModel.Composition.ImportingConstructor]
     public MapWindow([Import]Core.Events.IEventManager eventMgr, [Import]IProjectManager projectMgr)
@@ -57,13 +64,22 @@ namespace RVRMeander.Gui.Gis
       this.eventMgr = eventMgr;
       this.projectMgr = projectMgr;
 
+      this.curResultsSet = null;
+      this.resultsGroup = null;
       this.map.Legend = this.legend;
       this.map.GeoMouseMove += map_GeoMouseMove;
 
       this.toolItems = new List<Core.Window.IToolbarItem>();
       SetupToolItems();
 
+      SetupColors();
+
       this.eventMgr.AddListener(this);
+    }
+
+    private void SetupColors()
+    {
+      this.colorList = new List<Color>() { Color.Black, Color.Red, Color.Green, Color.Blue, Color.Cyan, Color.Magenta, Color.Yellow, Color.Brown, Color.Orange, Color.Salmon, Color.Fuchsia };
     }
 
     void map_GeoMouseMove(object sender, DotSpatial.Controls.GeoMouseArgs e)
@@ -393,7 +409,7 @@ namespace RVRMeander.Gui.Gis
       return ImportShapefile(filePath, name, p, false);
     }
 
-    public bool ImportShapefile(string filePath, string name, string p, bool addedFromProject)
+    public bool ImportShapefile(string filePath, string name, string p, bool addedFromProject, bool relativePath = false)
     {
       IFeatureSet fs = null;
       try
@@ -414,13 +430,23 @@ namespace RVRMeander.Gui.Gis
 
       if (!addedFromProject)
       {
-        this.projectMgr.SetProperty(Section_Layers, mapLayer.LegendText, filePath);
+        string savePath = filePath;
+        if (relativePath)
+        {
+          savePath = Path.GetFileName(filePath);
+        }
+        this.projectMgr.SetProperty(Section_Layers, mapLayer.LegendText, savePath);
       }
 
       return true;
     }
-
+    
     public bool ImportSQLite(string filePath, string name)
+    {
+      return ImportSQLite(filePath, name, false);
+    }
+
+    public bool ImportSQLite(string filePath, string name, bool addedFromProjectLoad)
     {
       Model.Geometry.SpatiaLite.Database db = new Model.Geometry.SpatiaLite.Database(filePath);
       List<IFeatureSet> dataset = null;
@@ -475,6 +501,11 @@ namespace RVRMeander.Gui.Gis
       //  return false;
       //}
 
+      if (!addedFromProjectLoad)
+      {
+        this.projectMgr.SetProperty(Section_Layers, name, filePath);
+      }
+
       return true;
     }
 
@@ -510,6 +541,16 @@ namespace RVRMeander.Gui.Gis
       this.map.Layers.Clear();
       Show(DockingState.Document);
 
+      try
+      {
+        var pi = DotSpatial.Projections.ProjectionInfo.FromProj4String(theEvent.Projection);
+        this.map.Projection = pi;
+      }
+      catch
+      {
+
+      }
+
       bool isEnabled = theEvent != null && theEvent.PackagePath.Length > 0;
       this.eventMgr.Publish(new Core.Window.Events.ToolbarItemStatusChanged(this, isEnabled));
 
@@ -519,12 +560,125 @@ namespace RVRMeander.Gui.Gis
         foreach (var layerName in layerNames)
         {
           string path = this.projectMgr.GetProperty(Section_Layers, layerName);
-          if (File.Exists(path))
+          if (!Path.IsPathRooted(path))
+          {
+            path = Path.Combine(theEvent.PackagePath, path);
+          }
+          if (File.Exists(path) && Path.GetExtension(path).ToLower() == ".shp")
           {
             ImportShapefile(path, layerName, "", true);
           }
+          else
+          {
+            ImportSQLite(path, layerName, true);
+          }
         }
       }
+    }
+
+    //internal void ImportFeatureSet(string layerName, IMapFeatureLayer layer)
+    //{
+    //  layer.LegendText = layerName;
+    //  this.map.Layers.Add(layer);
+    //}
+
+    public void MessageReceived(Core.Result.Events.ResultSetSelected theEvent)
+    {
+      SetupResultsMapGroup(theEvent.Set);
+    }
+
+    private void SetupResultsMapGroup(Core.Result.IResultSet set)
+    {
+      if (this.resultsGroup == null)
+      {
+        this.resultsGroup = new DotSpatial.Controls.MapGroup();
+        this.resultsGroup.LegendText = "Results";
+        this.resultsGroup.SelectionEnabled = true;
+        this.resultsGroup.IsVisible = false;
+        this.map.Layers.Add(this.resultsGroup);
+      }
+
+      if (set == null)
+      {
+        if (this.resultsLayer != null)
+        {
+          this.resultsGroup.Layers.Remove(this.resultsLayer);
+          this.resultsLayer = null;
+        }
+        this.curResultsSet = null;
+        this.resultsGroup.IsVisible = false;
+        return;
+      }
+
+      this.resultsGroup.IsVisible = true;
+      if (this.resultsGroup.Layers.Count > 0)
+      {
+        this.resultsGroup.Layers.Clear();
+      }
+
+      this.curResultsSet = set;
+
+      FeatureSet featureSet = new FeatureSet(FeatureType.Line);
+      featureSet.Projection = this.map.Projection;
+      featureSet.DataTable.Columns.Add(new DataColumn("LayerName", typeof(string)));
+
+      foreach (var layer in this.curResultsSet.LayerNames)
+      {
+        var points = this.curResultsSet.GetDataset(layer);
+        List<Coordinate> coords = new List<Coordinate>();
+        for (int i = 0; i <= points.GetUpperBound(0); i++)
+        {
+          coords.Add(new Coordinate(points[i, 0], points[i, 1]));
+        }
+        var feature = featureSet.AddFeature(new LineString(coords));
+        feature.DataRow["LayerName"] = layer;
+      }
+
+      this.resultsLayer = new MapLineLayer(featureSet);
+      this.resultsLayer.Symbology.EditorSettings.ExcludeExpression = "[LayerName] <> ''";
+
+      this.resultsGroup.Layers.Add(this.resultsLayer);
+    }
+
+    public void MessageReceived(Core.Result.Events.ResultLayerSelected theEvent)
+    {
+      if (theEvent.ResultSet == null)
+      {
+        this.resultsGroup.Layers.Remove(this.resultsLayer);
+        this.resultsLayer = null;
+        return;
+      }
+
+      if (this.curResultsSet != theEvent.ResultSet)
+      {
+        SetupResultsMapGroup(theEvent.ResultSet);
+      }
+
+      if (this.resultsLayer == null)
+      {
+        return;
+      }
+      
+      var layers = theEvent.SelectedLayers;
+
+      IFeatureScheme scheme = this.resultsLayer.Symbology.Clone() as IFeatureScheme;
+      this.resultsLayer.Symbology.SuspendEvents();
+      scheme.ClearCategories();
+
+      for (int i = 0; i < layers.Count; i++)
+      {
+        var cat = new LineCategory(this.colorList[i % this.colorList.Count], 1);
+        string filter = "[LayerName] = '" + layers[i] + "'";
+        cat.FilterExpression = filter;
+        cat.LegendText = layers[i];
+        scheme.AddCategory(cat);
+      }
+
+      BeginInvoke(new MethodInvoker(delegate
+        {
+          this.resultsLayer.Symbology.CopyProperties(scheme);
+          this.resultsLayer.Symbology.ResumeEvents();
+        }));
     }
   }
 

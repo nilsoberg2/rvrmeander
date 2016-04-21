@@ -25,6 +25,12 @@ namespace RVRMeander.Model.Mc
     [Import]
     private Gui.Gis.IMapWindow mapWindow;
 
+    [Import]
+    private Core.Result.IResultManager resultMgr;
+
+    [Import(typeof(Core.Result.IResultSetLoader))]
+    private ResultSetLoader loader;
+
     private Core.Events.IEventManager eventMgr;
 
     [ImportingConstructor]
@@ -70,7 +76,7 @@ namespace RVRMeander.Model.Mc
         return;
       }
 
-      RunSimulation(configFilePath, logFilePath);
+      RunSimulation(dirPath, configFilePath, logFilePath);
     }
 
     public bool IsChecked
@@ -108,7 +114,7 @@ namespace RVRMeander.Model.Mc
 
     #endregion
 
-    private void RunSimulation(string configFilePath, string logFilePath)
+    private void RunSimulation(string dirPath, string configFilePath, string logFilePath)
     {
       var wrapUp = new Action<string>(delegate(string message)
       {
@@ -147,6 +153,23 @@ namespace RVRMeander.Model.Mc
         }
 
         dll.Finish();
+
+        string outputPath = Path.Combine(dirPath, "TecPlot1D.DAT");
+        if (!File.Exists(outputPath))
+        {
+          wrapUp("Error in simulation: unable to find output file");
+          return;
+        }
+
+        string theName = Path.GetFileName(dirPath);
+        //TecplotReader reader = new TecplotReader(theName, outputPath);
+        //if (!reader.LoadFile())
+        //{
+        //  wrapUp("Error in simulation: unable to load output file");
+        //  return;
+        //}
+
+        this.resultMgr.AddResultSet(theName, theName, loader);
 
         wrapUp("Simulation completed successfully");
       }));
@@ -228,7 +251,7 @@ namespace RVRMeander.Model.Mc
       //Verify with Nils that we need this method call
       //cf.SetValue(cat, "method", cboFilterOnCenterlineMethod.SelectedItem.ToString());
       config.SetValue(cat, "method", "Savitzky-Golay");
-      config.SetValue(cat, "smoothing_order", 0); // No splines; no filter on centerline
+      config.SetValue(cat, "smoothing_order", 2); // Splines; no filter on centerline
       config.SetValue(cat, "curvature_filter", true);
 
       cat = "SMOOTHING.PARAMETERS";
@@ -245,12 +268,13 @@ namespace RVRMeander.Model.Mc
       config.SetValue(cat, "duration", this.propsWindow.PropDuration);
       config.SetValue(cat, "num_iterations", this.propsWindow.PropNumIterations);
       config.SetValue(cat, "filter_iterations", 10);
-      config.SetValue(cat, "splines_initially", true);
+      config.SetValue(cat, "splines_initially", false);
       config.SetValue(cat, "plot_iterations", 5);
       config.SetValue(cat, "migrate_upstream_node", true);
       config.SetValue(cat, "migrate_downstream_node", true);
       config.SetValue(cat, "threshold_for_cutoff", 1.0);
       config.SetValue(cat, "init_curvature", 0.0);
+      config.SetValue(cat, "init_perturbation_velocity", 0.0);
     }
 
     private void ExportSection_BankErosionProperties(Utils.IniFile config)
@@ -263,7 +287,7 @@ namespace RVRMeander.Model.Mc
       config.SetValue(cat, "gr_threshold", 0.016);
       config.SetValue(cat, "wp_threshold", 0.025);
       if (true)
-        config.SetValue(cat, "max_erosion_dist", "");
+        config.SetValue(cat, "max_erosion_dist", 8.0);
       else
         config.SetValue(cat, "max_erosion_dist", 10.0);
       config.SetValue(cat, "min_distance", 0.05);
@@ -279,7 +303,7 @@ namespace RVRMeander.Model.Mc
       config.SetValue(cat, "hydrost_force", true);
       config.SetValue(cat, "accuracy", 0.005);
       config.SetValue(cat, "max_iter", 8);
-      config.SetValue(cat, "analysis_method", 1); // Ordinary
+      config.SetValue(cat, "analysis_method", 3); // Ordinary
       config.SetValue(cat, "lambda", 0.4);
       //cf.SetValue(cat, "tblock", txtCharacteristicPeriodOfExistenceForASlumpBlock.Text);
       //cf.SetValue(cat, "use_karmor", getTrueFalseValue(ref chkUseDimensionlessSlumpBlockArmoringFactor));
@@ -295,14 +319,14 @@ namespace RVRMeander.Model.Mc
         config.SetValue(cat, "method", "Physically-based");
       config.SetValue(cat, "floodplain_heterogeneity", false);
       config.SetValue(cat, "erosion_coeff", 0.00000030);
-      config.SetValue(cat, "pb_method", 0); // Purely Erosional
-      config.SetValue(cat, "bank_shear_stress_method", 1); // Stage based
-      config.SetValue(cat, "node_to_monitor", 55);
-      config.SetValue(cat, "update_width_method", 1); // WS-banks intersects; mean dist.
-      config.SetValue(cat, "erosion_distance_method", 1); // WS-banks intersects
+      config.SetValue(cat, "pb_method", 2); // Purely Erosional
+      config.SetValue(cat, "bank_shear_stress_method", 3); // Stage based
+      config.SetValue(cat, "node_to_monitor", 75);
+      config.SetValue(cat, "update_width_method", 4); // WS-banks intersects; mean dist.
+      config.SetValue(cat, "erosion_distance_method", 2); // WS-banks intersects
       config.SetValue(cat, "gap_elongation", 0.1);
       config.SetValue(cat, "regrid_centerline_nodes", true);
-      config.SetValue(cat, "interpolate_after_splines", true);
+      config.SetValue(cat, "interpolate_after_splines", false);
       config.SetValue(cat, "interpolate_frequency", 10);
       config.SetValue(cat, "bank_interpolation_tolerance", 0.02);
       config.SetValue(cat, "initial_section_prop_file", initXsPropFile);
@@ -336,19 +360,29 @@ namespace RVRMeander.Model.Mc
     {
       string cat = "CHANNEL";
 
+      double sedSize;
+      if (!double.TryParse(this.propsWindow.PropSedimentSize, out sedSize))
+      {
+        sedSize = 0.06;
+      }
+      else
+      {
+        sedSize /= 1000;
+      }
+
       config.SetValue(cat, "flow", this.propsWindow.PropFlow);
       config.SetValue(cat, "width", this.propsWindow.PropWidth);
-      config.SetValue(cat, "sediment_size", this.propsWindow.PropSedimentSize);
+      config.SetValue(cat, "sediment_size", sedSize);
       config.SetValue(cat, "water_density", 1000);
       config.SetValue(cat, "valley_slope", this.propsWindow.PropValleySlope);
       config.SetValue(cat, "upstream_bed_elevation", this.propsWindow.PropUpstreamBedElev);
       config.SetValue(cat, "num_transverse_nodes", 51);
-      config.SetValue(cat, "centerline", riverFile);
-      config.SetValue(cat, "valley_centerline", valleyFile);
+      config.SetValue(cat, "centerline", Path.GetFileName(riverFile));
+      config.SetValue(cat, "valley_centerline", Path.GetFileName(valleyFile));
       config.SetValue(cat, "manning_coefficient", this.propsWindow.PropManningsN);
       config.SetValue(cat, "mesh_generation_method", 1); //TODO: represent in GUI
       config.SetValue(cat, "use_valley_centerline", false);
-      config.SetValue(cat, "threshold_regridding", 0.9); //TODO: represent in GUI
+      config.SetValue(cat, "threshold_regridding", 100); //TODO: represent in GUI
     }
 
     #endregion

@@ -49,6 +49,11 @@
     <Compile Include="Events\IListener.cs" />
     <Compile Include="Project\Events\PackageOpened.cs" />
     <Compile Include="Project\IProjectManager.cs" />
+    <Compile Include="Result\Events\ResultLayerSelected.cs" />
+    <Compile Include="Result\Events\ResultSetSelected.cs" />
+    <Compile Include="Result\IResultManager.cs" />
+    <Compile Include="Result\IResultSet.cs" />
+    <Compile Include="Result\IResultSetLoader.cs" />
     <Compile Include="Window\DockableWindow.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -38,12 +38,12 @@ namespace RVRMeander.Gui.Project
 
     public string Group
     {
-      get { return "Project"; }
+      get { return Const.Group_Name; }
     }
 
     public string Toolbar
     {
-      get { return "Main"; }
+      get { return Const.Toolbar_Name; }
     }
 
     public void Click()
@@ -76,7 +76,7 @@ namespace RVRMeander.Gui.Project
         return false;
       }
 
-      this.eventMgr.Publish(new Core.Project.Events.PackageOpened() { PackagePath = dirPath });
+      this.eventMgr.Publish(new Core.Project.Events.PackageOpened() { PackagePath = dirPath, Projection = projStr });
 
       return true;
     }

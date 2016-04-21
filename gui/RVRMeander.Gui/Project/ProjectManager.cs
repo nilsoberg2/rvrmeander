@@ -1,4 +1,5 @@
-﻿using RVRMeander.Utils;
+﻿using RVRMeander.Core.Result;
+using RVRMeander.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -10,11 +11,17 @@ using System.Threading.Tasks;
 namespace RVRMeander.Gui.Project
 {
   [Export(typeof(RVRMeander.Core.Project.IProjectManager))]
-  class ProjectManager : RVRMeander.Core.Project.IProjectManager,
+  [Export(typeof(RVRMeander.Core.Result.IResultManager))]
+  class ProjectManager : RVRMeander.Core.Project.IProjectManager, Core.Result.IResultManager,
     Core.Events.IListener<Core.Project.Events.PackageOpened>
   {
+
+    [ImportMany]
+    private IEnumerable<Core.Result.IResultSetLoader> resultSetLoaders;
+
     private Core.Events.IEventManager eventMgr;
     private string curProjectPath;
+    private Dictionary<string, Tuple<string, IResultSetLoader>> resultSets;
 
     [ImportingConstructor]
     public ProjectManager([Import]Core.Events.IEventManager eventMgr)
@@ -22,6 +29,7 @@ namespace RVRMeander.Gui.Project
       this.eventMgr = eventMgr;
 
       this.curProjectPath = "";
+      this.resultSets = new Dictionary<string, Tuple<string, IResultSetLoader>>();
 
       this.eventMgr.AddListener(this);
     }
@@ -164,6 +172,19 @@ namespace RVRMeander.Gui.Project
     public void MessageReceived(Core.Project.Events.PackageOpened theEvent)
     {
       this.curProjectPath = theEvent.PackagePath;
+
+      string[] simDirs = GetProperties(Const.Config_Section_Results);
+      foreach (var simDir in simDirs)
+      {
+        foreach (var loader in this.resultSetLoaders)
+        {
+          if (loader.CanLoad(Path.Combine(this.curProjectPath, simDir)))
+          {
+            this.resultSets[simDir] = new Tuple<string, IResultSetLoader>(GetProperty(Const.Config_Section_Results, simDir), loader);
+            break;
+          }
+        }
+      }
     }
 
     public bool CreatePackage(string targetDirPath)
@@ -189,5 +210,36 @@ namespace RVRMeander.Gui.Project
       }
     }
 
+    public void AddResultSet(string simDirName, string setName, Core.Result.IResultSetLoader loader)
+    {
+      //this.resultSets[simDirName] = new Tuple<string, Core.Result.IResultSet>(setName, set);
+      this.resultSets[simDirName] = new Tuple<string, IResultSetLoader>(setName, loader);
+      SetProperty(Const.Config_Section_Results, simDirName, setName);
+    }
+
+    public IEnumerable<string> ResultSetIds
+    {
+      get { return this.resultSets.Keys; }
+    }
+
+    public string GetResultSetName(string id)
+    {
+      return this.resultSets[id].Item1;
+    }
+
+    public bool LoadResultSet(string id, out IResultSet set)
+    {
+      if (!this.resultSets.ContainsKey(id))
+      {
+        set = null;
+        return false;
+      }
+      var loader = this.resultSets[id].Item2;
+      if (!loader.LoadResultSet(Path.Combine(this.curProjectPath, id), out set))
+      {
+        return false;
+      }
+      return true;
+    }
   }
 }

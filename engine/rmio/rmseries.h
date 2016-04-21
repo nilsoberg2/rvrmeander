@@ -25,7 +25,7 @@ public:
 	//double& vals(int idx1, int idx2);
 	//double vals(int idx) const;
 	//double vals(int idx1, int idx2) const;
-	double**& get_pointer(); // dangerous!  VERY DANGEROUS!  ONLY USE THIS IF YOU ARE 100% ABSOLUTELY COMPLETELY FULLY CONFIDENTLY SURE THAT YOU KNOW WHAT YOU ARE DOING!!!!!!!
+	double** get_pointer() const; // dangerous!  VERY DANGEROUS!  ONLY USE THIS IF YOU ARE 100% ABSOLUTELY COMPLETELY FULLY CONFIDENTLY SURE THAT YOU KNOW WHAT YOU ARE DOING!!!!!!!
 	inline double& operator()(int idx) { return vals_raw[idx][0]; }
 	inline double operator()(int idx) const { return vals_raw[idx][0]; }
 	inline double& operator()(int idx1, int idx2) { return vals_raw[idx1][idx2]; }

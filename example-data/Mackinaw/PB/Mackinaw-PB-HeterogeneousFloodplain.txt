@@ -1,0 +1,95 @@
+[RVRMEANDER]
+UserInterfaceUnits=SI
+MapUnits=SI
+[CHANNEL]
+flow=46.2
+width=38
+sediment_size=0.06
+water_density=1000.0
+valley_slope=0.0009
+upstream_bed_elevation=0
+num_transverse_nodes=51
+centerline=
+valley_centerline=
+manning_coefficient=0.0295204360820315
+mesh_generation_method=2
+use_valley_centerline=false
+threshold_regridding=0.9
+[PREPROCESSING.CURVATURE]
+method=1
+upstream_method=2
+downstream_method=1
+[HYDRODYNAMICS]
+method=Ikeda Et. Al. 1981
+last_node_method=1
+init_perturbation_velocity=0
+scour_factor=5
+[BANK_EROSION]
+method=Physically-based
+floodplain_heterogeneity=true
+erosion_coeff=3E-07
+pb_method=2
+bank_shear_stress_method=3
+node_to_monitor=55
+update_width_method=4
+erosion_distance_method=2
+gap_elongation=0.1
+regrid_centerline_nodes=true
+interpolate_after_splines=false
+interpolate_frequency=10
+bank_interpolation_tolerance=0.02
+initial_section_prop_file=
+floodplain_file=
+[BANK_EROSION.BANK_EVOLUTION_PROPERTIES]
+use_hydraulic_erosion=true
+type_law_hydraulic_erosion=1
+xs_division=2
+gr_threshold=0.016
+wp_threshold=0.025
+max_erosion_dist=8
+min_distance=0.05
+use_cantilever_failure=true
+undercut_threshold=0.1
+use_planar_failure=false
+num_intersects=3
+z_threshold=0.1
+tension_crack_opt=0.5
+slice_multip=5
+positive_pore=true
+negative_pore=true
+hydrost_force=true
+accuracy=0.005
+max_iter=8
+analysis_method=3
+lambda=0.4
+[MIGRATION]
+duration=37
+num_iterations=185
+filter_iterations=10
+splines_initially=true
+plot_iterations=185
+migrate_upstream_node=true
+migrate_downstream_node=true
+threshold_for_cutoff=1
+init_curvature=0
+[SMOOTHING]
+method=Savitzky-Golay
+smoothing_order=3
+curvature_filter=true
+[SMOOTHING.PARAMETERS]
+iterations=1
+window_nodes=5
+polynomial_order=2
+[PLOTTING]
+output_1D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlot1D.DAT
+output_uv2D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotuv2D.DAT
+output_hde2D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlothde2D.DAT
+output_U1V12D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotU1V12D.DAT
+output_H1D1E12D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotH1D1E12D.DAT
+output_UUVV2D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotUUVV2D.DAT
+output_HHDDEE2D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotHHDDEE2D.DAT
+output_VELandTAU2D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotVELandTAU2D.DAT
+output_Sections2D=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotSections2D.DAT
+output_Hydro3D=
+output_BedBanks3D=
+output_Floodplain=C:\Documents and Settings\dmotta2\Desktop\Run\TecPlotGrid.DAT

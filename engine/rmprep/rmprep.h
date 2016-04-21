@@ -24,7 +24,7 @@ public:
     RMPrep();
     virtual ~RMPrep();
     virtual bool Initialize(double** xy, int numPoints, bool reverseOrientation = false);
-	virtual bool Initialize(RMSeries data, bool reverseOrientation = false);
+	virtual bool Initialize(const RMSeries& data, bool reverseOrientation = false);
 	virtual bool InitializeVirtual(Virtual2ColArray* data, bool reverseOrientation = false);
 
     // Interpolation functions

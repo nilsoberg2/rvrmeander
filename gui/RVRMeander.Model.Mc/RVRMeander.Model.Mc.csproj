@@ -54,9 +54,11 @@
     <Compile Include="Const.cs" />
     <Compile Include="DllAccess.cs" />
     <Compile Include="PInvoke.cs" />
+    <Compile Include="ResultSetLoader.cs" />
     <Compile Include="RunModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RvrDotNetAccess.cs" />
+    <Compile Include="TecplotReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ChannelProperties.resx">

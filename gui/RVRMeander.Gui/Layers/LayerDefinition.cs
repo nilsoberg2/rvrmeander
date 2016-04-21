@@ -182,13 +182,19 @@ namespace RVRMeander.Gui.Layers
 
       if (this.cmbSelectRiverCenterline.SelectedItem != null)
       {
-        var riverLayer = this.cmbSelectRiverCenterline.SelectedItem as ILayer;
-        this.projectMgr.SetProperty("river", riverLayer.LegendText);
+        var riverLayer = this.cmbSelectRiverCenterline.SelectedItem as string;
+        if (riverLayer != null)
+        {
+          this.projectMgr.SetProperty("river", riverLayer);
+        }
       }
       if (this.cmbSelectValleyCenterline.SelectedItem != null)
       {
-        var valleyLayer = this.cmbSelectValleyCenterline.SelectedItem as ILayer;
-        this.projectMgr.SetProperty("valley", valleyLayer.LegendText);
+        var valleyLayer = this.cmbSelectValleyCenterline.SelectedItem as string;
+        if (valleyLayer != null)
+        {
+          this.projectMgr.SetProperty("valley", valleyLayer);
+        }
       }
     }
 

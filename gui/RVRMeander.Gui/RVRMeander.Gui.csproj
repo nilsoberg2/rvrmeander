@@ -198,6 +198,12 @@
       <DependentUpon>ProjectionSelectionPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Project\ProjectManager.cs" />
+    <Compile Include="Project\ResultManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\ResultManagerForm.Designer.cs">
+      <DependentUpon>ResultManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UiImages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Project\ProjectionSelectionPanel.resx">
       <DependentUpon>ProjectionSelectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\ResultManagerForm.resx">
+      <DependentUpon>ResultManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -372,6 +381,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\open_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clearwindowcontent_6304.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -49,7 +49,7 @@ RMPrep::RMPrep()
 }
 
 
-bool RMPrep::Initialize(RMSeries data, bool reverseOrientation)
+bool RMPrep::Initialize(const RMSeries& data, bool reverseOrientation)
 {
     TwoDDoubleArray* a = new TwoDDoubleArray();
     a->setobj(data.get_pointer(), data.length);
@@ -138,6 +138,8 @@ bool RMPrep::InitializeVirtual(Virtual2ColArray* data, bool reverseOrientation)
     }
 
     // Next, we create the spline (first deleting it if it already exists).
+	//if (m_xSpline != NULL)
+	//	gsl_spline_free(m_xSpline);
     m_xSpline = gsl_spline_alloc(SPLINE_TYPE, numPoints);
     int retval = gsl_spline_init(m_xSpline, indexes, xvalues, numPoints);
     if (retval || m_xSpline == NULL)
@@ -149,7 +151,9 @@ bool RMPrep::InitializeVirtual(Virtual2ColArray* data, bool reverseOrientation)
     }
 
     m_ySpline = gsl_spline_alloc(SPLINE_TYPE, numPoints);
-    retval = gsl_spline_init(m_ySpline, indexes, yvalues, numPoints);
+	//if (m_ySpline != NULL)
+	//	gsl_spline_free(m_ySpline);
+	retval = gsl_spline_init(m_ySpline, indexes, yvalues, numPoints);
     if (retval || m_ySpline == NULL)
     {
         delete[] xvalues;
@@ -915,47 +919,51 @@ void RMPrep::ComputeIntervals(RMMigrationData*& migdata, RMPrepData* data)			//C
 
 void RMPrep::RegridMCA(RMMigrationData* migdata, RMPrepData* data)		//ADDITION FEB2010    //DM-FEB2012 Removed & from RMMigrationData*
 {
-	RMSeries channel = migdata->channel.centerline;
+	auto channel = &(migdata->channel.centerline);
 	int newnumberpoints;
 	
 	logmsg("Regridding\n");
 
 	newnumberpoints = data->sSum / migdata->channel.threshold_regrid;	//DM-FEB2011
 
+	// Interpolate on splines here.
 	RMPrep prep;
-	prep.Initialize(channel);
+	prep.Initialize(*channel);
 
 	int size = 0;
 	double** xy = NULL;
 	prep.GetXY(newnumberpoints, size, xy);				
 					
-    // Nils changed this 2/16/2011 from channel.width (width of array) to
-    // migdata->channel.nnodes.
+    // Nils changed this 2/16/2011 from channel.width (width of array) to migdata->channel.nnodes
 	migdata->Init(size, migdata->channel.nnodes);			
-	channel.init(size, 2, xy);
+	channel->init(size, 2, xy);
 
     FreeXY(size, xy);
-					
-	data->intervals.init(channel.length);
-	data->coords.init(channel.length);
-	data->theta.init(channel.length);
-	data->dcurvatureds.init(channel.length);
-	data->curvature.init(channel.length);
-	data->curvaturecopy.init(channel.length);
-	data->S.init(channel.length);
-	data->deltaX.init(channel.length);
-	data->deltaY.init(channel.length);
-	data->delta2X.init(channel.length);
-	data->delta2Y.init(channel.length);
+
+	//auto channel = &(migdata->channel.centerline);
+	//int channelLength = migdata->channel.centerline.length;
+	int channelLength = channel->length;
+	
+	data->intervals.init(channelLength);
+	data->coords.init(channelLength);
+	data->theta.init(channelLength);
+	data->dcurvatureds.init(channelLength);
+	data->curvature.init(channelLength);
+	data->curvaturecopy.init(channelLength);
+	data->S.init(channelLength);
+	data->deltaX.init(channelLength);
+	data->deltaY.init(channelLength);
+	data->delta2X.init(channelLength);
+	data->delta2Y.init(channelLength);
 				
 	data->sSum = 0.0;
 	data->coords(0) = 0.0;	
 	data->intervals(0) = 0.0;	
 	data->MaxInterval = data->intervals(0);
 	data->MinInterval = 9999.0;//DM-FEB2011
-	for (int i = 1; i <= channel.length-1; i++)
+	for (int i = 1; i <= channelLength - 1; i++)
 		{	
-			data->intervals(i) = sqrt(pow((channel(i,0)-channel(i-1,0)),2.0)+pow((channel(i,1)-channel(i-1,1)),2.0));
+			data->intervals(i) = sqrt(pow(((*channel)(i, 0) - (*channel)(i - 1, 0)), 2.0) + pow(((*channel)(i, 1) - (*channel)(i - 1, 1)), 2.0));
 			data->sSum = data->sSum + data->intervals(i);
 			data->coords(i) = data->sSum;	
 			if (data->intervals(i) > data->MaxInterval) {data->MaxInterval = data->intervals(i);}	
@@ -965,7 +973,7 @@ void RMPrep::RegridMCA(RMMigrationData* migdata, RMPrepData* data)		//ADDITION F
 	data->MinInterval = data->MinInterval * migdata->channel.WIDTH/2;	//DM-FEB2011
 	//logmsg("	Updated Max ds (m)= %lf, ds/B = %lf \n", data->MaxInterval, data->MaxInterval/(migdata->channel.WIDTH/2));
 	//logmsg("	Updated Number of nodes in the streamwise direction = %d \n", channel.length);												
-	migdata->channel.centerline = channel;															
+	//migdata->channel.centerline = channel;															
 
 }
 

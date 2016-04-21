@@ -41,7 +41,7 @@ RMSeries& RMSeries::operator=(const RMSeries& s)
 }
 
 
-double**& RMSeries::get_pointer()
+double** RMSeries::get_pointer() const
 {
 	return vals_raw;
 }
