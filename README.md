@@ -5,6 +5,11 @@ Open-source RVR Meander 2.0 alpha
 Currently the code must be downloaded and compiled.  We have no releases at this
 time although we expect a release by the end of April 2016.
 
+###
+
+gui was developed by Nils Oberg.  The engine framework was initially developed by Nils Oberg
+then continued by Davide Motta.
+
 ## Building the Engine
 
 ### Dependencies
